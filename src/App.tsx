@@ -1,5 +1,13 @@
+import Home from "./pages/Home";
+import Authentication from "./routes/AuthPageRoute";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Home />
+      <Authentication />
+    </>
+  );
 }
 
 export default App;
