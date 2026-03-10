@@ -1,24 +1,17 @@
-import { useForm } from "react-hook-form";
+import LoginCard from "../components/Login/LoginCard";
 
 const Login = () => {
-  const {
-    register,
-    watch,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
   return (
-    <div>
-      <h1>Login page</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Full Name: </label>
-        <input {...register("name")} />
-
-        <label htmlFor="password">Password: </label>
-        <input {...register("password")} />
-
-        <button type="submit">Login</button>
-      </form>
+    <div className="h-[100vh] flex justify-center items-center bg-black">
+      <div className="flex flex-col gap-[3rem] items-center ">
+        <div className="flex flex-col gap-[8px] items-center ">
+          <h1 className="text-white font-poppins font-bold text-[24px]">
+            SECURE<span className="text-[#4D82FF] ">VAULT</span>
+          </h1>
+          <p className="font-dmsans text-[16px] text-textSecondaryColor">Sign in to access the vault</p>
+        </div>
+        <LoginCard />
+      </div>
     </div>
   );
 };

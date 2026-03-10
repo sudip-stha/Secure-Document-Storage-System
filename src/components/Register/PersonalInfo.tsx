@@ -56,7 +56,7 @@ const PersonalInfo = ({ next }) => {
             <label htmlFor="email">Email Address </label>
             <input
               {...register("email")}
-              placeholder="Enter your email name"
+              placeholder="Enter your email address"
               className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
             />
             <p className="text-red-500">{errors.email?.message}</p>

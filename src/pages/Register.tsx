@@ -17,46 +17,46 @@ const Register = () => {
             Create an account (Admin Approval Required)
           </p>
         </div>
-        <div className="progress">
-          <ol className="flex gap-24">
-            <li
-              className={`flex items-center gap-2 ${step === 1 ? "text-white" : "text-textTertiaryColor"}`}
-            >
-              <input
-                type="radio"
-                name="personal"
-                value="personal"
-                checked={step === 1}
-                className="w-9 h-9"
-              />{" "}
-              Personal
-            </li>
-            <li
-              className={`flex items-center gap-2 ${step === 2 ? "text-white" : "text-textTertiaryColor"}`}
-            >
-              <input
-                type="radio"
-                name="security"
-                value="security"
-                checked={step === 2}
-                className="w-9 h-9"
-              />
-              Security
-            </li>
-            <li
-              className={`flex items-center gap-2 ${step === 3 ? "text-white" : "text-textTertiaryColor"}`}
-            >
-              <input
-                type="radio"
-                name="verification"
-                value="verification"
-                checked={step === 3}
-                className="w-9 h-9"
-              />
-              Verification
-            </li>
-          </ol>
-        </div>
+
+        <ol className="flex gap-24">
+          <li
+            className={`flex items-center gap-2 ${step === 1 ? "text-white" : "text-textTertiaryColor"}`}
+          >
+            <input
+              type="radio"
+              name="personal"
+              value="personal"
+              checked={step === 1}
+              className="w-9 h-9"
+            />{" "}
+            Personal
+          </li>
+          <li
+            className={`flex items-center gap-2 ${step === 2 ? "text-white" : "text-textTertiaryColor"}`}
+          >
+            <input
+              type="radio"
+              name="security"
+              value="security"
+              checked={step === 2}
+              className="w-9 h-9"
+            />
+            Security
+          </li>
+          <li
+            className={`flex items-center gap-2 ${step === 3 ? "text-white" : "text-textTertiaryColor"}`}
+          >
+            <input
+              type="radio"
+              name="verification"
+              value="verification"
+              checked={step === 3}
+              className="w-9 h-9"
+            />
+            Verification
+          </li>
+        </ol>
+
         <Activity mode={step === 1 ? "visible" : "hidden"}>
           <PersonalInfo next={() => setStep(2)} />
         </Activity>

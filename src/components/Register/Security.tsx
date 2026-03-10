@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { securitySchema, type SecurityData } from "../../lib/schema";
+import PrimaryButton from "../ui/Buttons/PrimaryButton";
 
 const Security = ({ next, back }) => {
   const {
@@ -30,16 +31,35 @@ const Security = ({ next, back }) => {
         <div className="flex flex-wrap gap-x-[1.75rem] gap-y-[1rem] text-textSecondaryColor">
           <div className="flex flex-col gap-[14px] ">
             <label htmlFor="password">Password </label>
-            <input type="password" {...register("password")} />
+            <input
+              type="password"
+              {...register("password")}
+              placeholder="Enter Your Password"
+              className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
+            />
             <p className="text-red-500">{errors.password?.message}</p>
           </div>
-          <label htmlFor="confirmPassword">Confirm Password </label>
-          <input type="password" {...register("confirmPassword")} />
-          <p className="text-red-500">{errors.confirmPassword?.message}</p>
+
+          <div className="flex flex-col gap-[14px]">
+            <label htmlFor="confirmPassword">Confirm Password </label>
+            <input
+              type="password"
+              {...register("confirmPassword")}
+              placeholder="Enter Your Password"
+              className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
+            />
+            <p className="text-red-500">{errors.confirmPassword?.message}</p>
+          </div>
         </div>
 
-        <button onClick={back}>back</button>
-        <button type="submit">Continue</button>
+        <div className="flex justify-between mt-[7.3rem]">
+          
+          <button onClick={back}>back</button>
+          <PrimaryButton
+            value={"continue"}
+            iconPath={"/public/icons/rightArrow.svg"}
+          />
+        </div>
       </form>
     </div>
   );
