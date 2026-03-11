@@ -2,49 +2,51 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { appRoutes } from "../../routes/routes";
 import PrimaryButton from "../ui/Buttons/PrimaryButton";
+import { loginSchema, type LoginData } from "../../lib/schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import InputField from "../ui/InputField";
 
 const LoginCard = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<LoginData>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
-  function onSubmit() {}
+  function onSubmit(data: LoginData) {
+    console.log(data);
+  }
   return (
     <div className="flex gap-[4.5rem] flex-col items-center bg-raisedSurfaceColor border border-strongBorderColor rounded-[12px] px-[3.5rem] py-[4.5rem]">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col text-textSecondaryColor"
       >
-        <div className="flex flex-col gap-[14px] ">
-          <label htmlFor="email">Email Address </label>
+        <InputField
+          label="Email Address"
+          name="email"
+          type="email"
+          register={register}
+          placeholder="Enter your email address"
+          error={errors.email}
+          iconPath="/public/icons/emailIcon.svg"
+        />
 
-          <input
-            {...register("email")}
-            placeholder="Enter your email address"
-            className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] pl-[32px] p-[8px] focus:bg-overlaySurfaceColor text-textSecondaryColor"
-          />
-          <img
-            src="/public/icons/account.svg"
-            alt=""
-            className="w-[15px] h-[15px] relative top-[-42px] left-3"
-          />
-        </div>
-
-        <div className="flex flex-col gap-[14px] ">
-          <label htmlFor="password">Password </label>
-          <input
-            {...register("password")}
-            placeholder="Enter Your Password"
-            className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] pl-[32px] p-[8px] focus:bg-overlaySurfaceColor text-textSecondaryColor"
-          />
-          <img
-            src="/public/icons/lock.svg"
-            alt=""
-            className="w-[15px] h-[15px] relative top-[-42px] left-3"
-          />
-        </div>
+        <InputField
+          label="Password"
+          name="password"
+          type="password"
+          register={register}
+          placeholder="Enter Your Password"
+          error={errors.password}
+          iconPath="/public/icons/lock.svg"
+        />
 
         <PrimaryButton value={"Authenticate Identity"} />
       </form>

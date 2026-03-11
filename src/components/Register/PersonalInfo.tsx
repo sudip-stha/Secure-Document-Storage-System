@@ -4,8 +4,10 @@ import { appRoutes } from "../../routes/routes";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalSchema, type PersonalData } from "../../lib/schema";
 import PrimaryButton from "../ui/Buttons/PrimaryButton";
+import type { NextBtnType } from "../../types/data";
+import InputField from "../ui/InputField";
 
-const PersonalInfo = ({ next }) => {
+const PersonalInfo = ({ next }: NextBtnType) => {
   const {
     register,
     handleSubmit,
@@ -19,8 +21,9 @@ const PersonalInfo = ({ next }) => {
     },
   });
 
-  function onsubmit() {
+  function onsubmit(data: PersonalData) {
     next();
+    console.log(data);
   }
   return (
     <div className="flex gap-[2.5rem] flex-col w-[45.1rem] bg-raisedSurfaceColor border border-strongBorderColor rounded-[12px] p-[2.5rem]">
@@ -32,35 +35,35 @@ const PersonalInfo = ({ next }) => {
         className="font-dmsans text-[14px]"
       >
         <div className="flex flex-wrap gap-x-[1.75rem] gap-y-[1rem] text-textSecondaryColor">
-          <div className="flex flex-col gap-[14px] ">
-            <label htmlFor="firstName">First Name </label>
-            <input
-              {...register("firstName")}
-              placeholder="Enter your First name"
-              className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
-            />
-            <p className="text-red-500">{errors.firstName?.message}</p>
-          </div>
+          <InputField
+            label="First name"
+            name="firstName"
+            type="text"
+            register={register}
+            placeholder="Enter your First name"
+            error={errors.firstName}
+            iconPath="/public/icons/account.svg"
+          />
 
-          <div className="flex flex-col gap-[14px]">
-            <label htmlFor="lastName">Last Name </label>
-            <input
-              {...register("lastName")}
-              placeholder="Enter your Last name"
-              className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
-            />
-            <p className="text-red-500">{errors.lastName?.message}</p>
-          </div>
+          <InputField
+            label="Last Name"
+            name="lastName"
+            type="text"
+            register={register}
+            placeholder="Enter your Last name"
+            error={errors.lastName}
+            iconPath="/public/icons/account.svg"
+          />
 
-          <div className="flex flex-col gap-[14px]">
-            <label htmlFor="email">Email Address </label>
-            <input
-              {...register("email")}
-              placeholder="Enter your email address"
-              className="w-[19.1rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-[4px] p-[8px]"
-            />
-            <p className="text-red-500">{errors.email?.message}</p>
-          </div>
+          <InputField
+            label="Email Address"
+            name="email"
+            type="email"
+            register={register}
+            placeholder="Enter your email address"
+            error={errors.email}
+            iconPath="/public/icons/emailIcon.svg"
+          />
         </div>
 
         <div className="flex justify-between mt-[1.6rem]">
