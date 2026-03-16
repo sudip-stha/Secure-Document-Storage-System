@@ -26,15 +26,15 @@ const PersonalInfo = ({ next }: NextBtnType) => {
     console.log(data);
   }
   return (
-    <div className="flex gap-[2.5rem] flex-col w-[45.1rem] bg-raisedSurfaceColor border border-strongBorderColor rounded-[12px] p-[2.5rem]">
-      <h2 className="font-poppins font-bold text-[20px] text-white">
+    <div className="flex gap-10 flex-col w-204 bg-raisedSurfaceColor border border-strongBorderColor rounded-xl p-10">
+      <h2 className="font-var(--font-poppins) font-bold text-[20px] text-white">
         Personal Information
       </h2>
       <form
         onSubmit={handleSubmit(onsubmit)}
         className="font-dmsans text-[14px]"
       >
-        <div className="flex flex-wrap gap-x-[1.75rem] gap-y-[1rem] text-textSecondaryColor">
+        <div className="flex flex-wrap gap-x-7 gap-y-4 text-textSecondaryColor">
           <InputField
             label="First name"
             name="firstName"
@@ -42,7 +42,7 @@ const PersonalInfo = ({ next }: NextBtnType) => {
             register={register}
             placeholder="Enter your First name"
             error={errors.firstName}
-            iconPath="/public/icons/account.svg"
+            iconPath="/icons/account.svg"
           />
 
           <InputField
@@ -52,7 +52,7 @@ const PersonalInfo = ({ next }: NextBtnType) => {
             register={register}
             placeholder="Enter your Last name"
             error={errors.lastName}
-            iconPath="/public/icons/account.svg"
+            iconPath="/icons/account.svg"
           />
 
           <InputField
@@ -62,25 +62,21 @@ const PersonalInfo = ({ next }: NextBtnType) => {
             register={register}
             placeholder="Enter your email address"
             error={errors.email}
-            iconPath="/public/icons/emailIcon.svg"
+            iconPath="/icons/emailIcon.svg"
           />
         </div>
 
         <div className="flex justify-between mt-[1.6rem]">
           <Link
             to={appRoutes.Login}
-            className=" flex items-center gap-[11px] text-textSecondaryColor"
+            className=" flex items-center gap-3 text-textSecondaryColor"
           >
-            <img
-              src="/public/icons/leftArrow.svg"
-              alt=""
-              className="w-[13px]"
-            />
+            <img src="/icons/leftArrow.svg" alt="" className="w-3" />
             Back to Login
           </Link>
           <PrimaryButton
             value={"continue"}
-            iconPath={"/public/icons/rightArrow.svg"}
+            iconPath={"/icons/rightArrow.svg"}
           />
         </div>
       </form>

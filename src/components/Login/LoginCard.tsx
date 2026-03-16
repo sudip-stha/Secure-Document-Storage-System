@@ -4,7 +4,6 @@ import { appRoutes } from "../../routes/routes";
 import PrimaryButton from "../ui/Buttons/PrimaryButton";
 import { loginSchema, type LoginData } from "../../lib/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import InputField from "../ui/InputField";
 
 const LoginCard = () => {
   const {
@@ -23,30 +22,49 @@ const LoginCard = () => {
     console.log(data);
   }
   return (
-    <div className="flex gap-[4.5rem] flex-col items-center bg-raisedSurfaceColor border border-strongBorderColor rounded-[12px] px-[3.5rem] py-[4.5rem]">
+    <div className="flex gap-18 flex-col items-center bg-raisedSurfaceColor border border-strongBorderColor rounded-xl px-14 py-18">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col text-textSecondaryColor"
       >
-        <InputField
-          label="Email Address"
-          name="email"
-          type="email"
-          register={register}
-          placeholder="Enter your email address"
-          error={errors.email}
-          iconPath="/public/icons/emailIcon.svg"
-        />
+        <div className="flex flex-col gap-3.5 ">
+          <label htmlFor="email">Email Address </label>
+          <input
+            type="email"
+            {...register("email")}
+            placeholder="Enter your email address"
+            className="w-[24rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-sm pl-8 p-2 placeholder:text-textTertiaryColor"
+          />
+          <img
+            src="/icons/emailIcon.svg"
+            alt=""
+            className="w-4 h-4 relative -top-10.5 left-3"
+          />
+          <p className="text-red-500">{errors.email?.message}</p>
+        </div>
 
-        <InputField
-          label="Password"
-          name="password"
-          type="password"
-          register={register}
-          placeholder="Enter Your Password"
-          error={errors.password}
-          iconPath="/public/icons/lock.svg"
-        />
+        <div className="flex flex-col gap-3.5 relative ">
+          <label htmlFor="password">Password </label>
+          <input
+            {...register("password")}
+            type="password"
+            placeholder="Enter Your Password"
+            className="w-[24rem] bg-overlaySurfaceColor border border-strongBorderColor rounded-sm pl-8 p-2 placeholder:text-textTertiaryColor"
+          />
+
+          <Link
+            to={appRoutes.ForgotPassword}
+            className="font-dmsans text-[12px] underline self-end text-[#80A8FF] mb-12"
+          >
+            Forgot Password?
+          </Link>
+          <img
+            src="/icons/lock.svg"
+            alt=""
+            className="w-4 h-4 absolute top-13 left-3"
+          />
+          <p className="text-red-500">{errors.password?.message}</p>
+        </div>
 
         <PrimaryButton value={"Authenticate Identity"} />
       </form>

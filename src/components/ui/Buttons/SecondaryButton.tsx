@@ -1,12 +1,11 @@
 import type { BtnType } from "../../../types/data";
 
-const PrimaryButton = ({ value, iconPath }: BtnType) => {
+const SecondaryButton = ({ value }: BtnType) => {
   return (
     <button className="bg-actionPrimaryColor px-4 py-3 text-white flex gap-4 rounded-lg font-medium justify-center">
       {value}
-      <img src={iconPath} alt="" className={`${iconPath ? "w-3.25" : " "}`} />
     </button>
   );
 };
 
-export default PrimaryButton;
+export default SecondaryButton;

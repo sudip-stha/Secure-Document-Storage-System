@@ -1,6 +1,6 @@
 import type { FieldError, FieldValues, UseFormRegister } from "react-hook-form";
 
-export interface PrimaryBtnType {
+export interface BtnType {
   value: string;
   iconPath?: string;
 }
