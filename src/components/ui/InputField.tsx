@@ -1,6 +1,7 @@
+import type { FieldValues } from "react-hook-form";
 import type { InputFieldType } from "../../types/data";
 
-const InputField = ({
+const InputField = <T extends FieldValues>({
   label,
   name,
   type,
@@ -8,7 +9,7 @@ const InputField = ({
   placeholder,
   error,
   iconPath,
-}: InputFieldType) => {
+}: InputFieldType<T>) => {
   return (
     <div className="flex flex-col gap-3.5 relative ">
       <label htmlFor={name}>{label} </label>

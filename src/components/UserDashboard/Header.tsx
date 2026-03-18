@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="flex justify-between bg-elevated-surface px-10 py-3">
+    <div className="flex justify-between bg-overlay-surface px-10 py-3">
       <h1 className="text-white font-poppins font-bold text-[24px]">
         SECURE<span className="text-[#4D82FF] ">VAULT</span>
       </h1>

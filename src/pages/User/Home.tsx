@@ -1,11 +1,11 @@
-import Aside from "../../components/UserDashboard/Aside";
 import Header from "../../components/UserDashboard/Header";
+import Main from "../../components/UserDashboard/Main";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <Aside />
+      <Main />
     </div>
   );
 };

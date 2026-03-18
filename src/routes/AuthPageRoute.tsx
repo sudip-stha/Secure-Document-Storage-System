@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { appRoutes } from "./routes";
 import { lazy, Suspense } from "react";
-import ForgotPassword from "../pages/Auths/ForgotPassword";
 
 const Login = lazy(() => import("../pages/Auths/Login"));
 const Register = lazy(() => import("../pages/Auths/Register"));
+const ForgotPassword = lazy(() => import("../pages/Auths/ForgotPassword"));
 
 const AuthPageRoute = () => (
   <div>
