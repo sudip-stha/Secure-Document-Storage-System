@@ -28,14 +28,14 @@ const Register = () => {
           <h1 className="font-poppins font-bold text-[24px] text-white">
             Register Your Account
           </h1>
-          <p className="font-dmsans text-[16px] text-textSecondaryColor">
+          <p className="font-dmsans text-[16px] text-text-secondary">
             Create an account (Admin Approval Required)
           </p>
         </div>
 
         <ol className="flex gap-3 items-center">
           <li
-            className={`flex items-center gap-2 ${step === 1 ? "text-white" : "text-textTertiaryColor"}`}
+            className={`flex items-center gap-2 ${step === 1 ? "text-white" : "text-text-tertiary"}`}
           >
             <input
               type="radio"
@@ -47,9 +47,9 @@ const Register = () => {
             />
             Personal
           </li>
-          <li className="w-24 h-px bg-textSecondaryColor"></li>
+          <li className="w-24 h-px bg-text-secondary"></li>
           <li
-            className={`flex items-center gap-2 ${step === 2 ? "text-white" : "text-textSecondaryColor"}`}
+            className={`flex items-center gap-2 ${step === 2 ? "text-white" : "text-text-secondary"}`}
           >
             <input
               type="radio"
@@ -60,9 +60,9 @@ const Register = () => {
             />
             Security
           </li>
-          <li className="w-24 h-px bg-textSecondaryColor"></li>
+          <li className="w-24 h-px bg-text-secondary"></li>
           <li
-            className={`flex items-center gap-2 ${step === 3 ? "text-white" : "text-textTertiaryColor"}`}
+            className={`flex items-center gap-2 ${step === 3 ? "text-white" : "text-text-tertiary"}`}
           >
             <input
               type="radio"

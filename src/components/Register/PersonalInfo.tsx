@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { appRoutes } from "../../routes/routes";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalSchema, type PersonalData } from "../../lib/schema";
-import PrimaryButton from "../ui/Buttons/PrimaryButton";
 import type { NextBtnType } from "../../types/data";
 import InputField from "../ui/InputField";
+import Button from "../ui/Button/Button";
 
 const PersonalInfo = ({ next }: NextBtnType) => {
   const {
@@ -26,15 +26,15 @@ const PersonalInfo = ({ next }: NextBtnType) => {
     console.log(data);
   }
   return (
-    <div className="flex gap-10 flex-col w-204 bg-raisedSurfaceColor border border-strongBorderColor rounded-xl p-10">
-      <h2 className="font-var(--font-poppins) font-bold text-[20px] text-white">
+    <div className="flex gap-10 flex-col w-204 bg-raised-surface border border-strong-border rounded-xl p-10">
+      <h2 className="font-poppins font-bold text-[20px] text-white">
         Personal Information
       </h2>
       <form
         onSubmit={handleSubmit(onsubmit)}
         className="font-dmsans text-[14px]"
       >
-        <div className="flex flex-wrap gap-x-7 gap-y-4 text-textSecondaryColor">
+        <div className="flex flex-wrap gap-x-7 gap-y-4 text-text-secondary">
           <InputField
             label="First name"
             name="firstName"
@@ -69,15 +69,18 @@ const PersonalInfo = ({ next }: NextBtnType) => {
         <div className="flex justify-between mt-[1.6rem]">
           <Link
             to={appRoutes.Login}
-            className=" flex items-center gap-3 text-textSecondaryColor"
+            className=" flex items-center gap-3 text-text-secondary"
           >
             <img src="/icons/leftArrow.svg" alt="" className="w-3" />
             Back to Login
           </Link>
-          <PrimaryButton
-            value={"continue"}
+          <Button
+            variant={"primary"}
+            size={"sm"}
             iconPath={"/icons/rightArrow.svg"}
-          />
+          >
+            Continue
+          </Button>
         </div>
       </form>
     </div>

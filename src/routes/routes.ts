@@ -3,4 +3,5 @@ export const appRoutes = {
   Login: "/login",
   Register: "/register",
   ForgotPassword: "/forgot-password",
+  UserHome: "/user/home",
 } as const;

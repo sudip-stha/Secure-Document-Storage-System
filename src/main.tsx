@@ -7,6 +7,7 @@ import Login from "./pages/Auths/Login.tsx";
 import Register from "./pages/Auths/Register.tsx";
 import { appRoutes } from "./routes/routes.ts";
 import ForgotPassword from "./pages/Auths/ForgotPassword.tsx";
+import Home from "./pages/User/Home.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: appRoutes.ForgotPassword,
         element: <ForgotPassword />,
+      },
+      {
+        path: appRoutes.UserHome,
+        element: <Home />,
       },
     ],
   },

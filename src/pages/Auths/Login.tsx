@@ -8,7 +8,7 @@ const Login = () => {
           <h1 className="text-white font-poppins font-bold text-[24px]">
             SECURE<span className="text-[#4D82FF] ">VAULT</span>
           </h1>
-          <p className="font-dmsans text-[16px] text-textSecondaryColor">
+          <p className="font-dmsans text-[16px] text-text-secondary">
             Sign in to access the vault
           </p>
         </div>

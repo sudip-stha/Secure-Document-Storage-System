@@ -10,7 +10,7 @@ const AuthPageRoute = () => (
   <div>
     <Suspense fallback={"Loading..."}>
       <Routes>
-        <Route path={appRoutes.Home} element={<Register />} />
+        <Route path={appRoutes.Home} element={<Login />} />
         <Route path={appRoutes.Login} element={<Login />} />
         <Route path={appRoutes.Register} element={<Register />} />
         <Route path={appRoutes.ForgotPassword} element={<ForgotPassword />} />
