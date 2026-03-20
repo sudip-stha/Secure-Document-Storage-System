@@ -1,12 +1,12 @@
 import Aside from "./Aside";
-import Section from "./Section";
+import Section from "./section/Section";
 
 const Main = () => {
   return (
-    <div className="flex bg-overlay-surface pt-1.5">
+    <main className="flex bg-overlay-surface pt-1.5">
       <Aside />
       <Section />
-    </div>
+    </main>
   );
 };
 

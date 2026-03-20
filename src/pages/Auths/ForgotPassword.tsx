@@ -47,11 +47,11 @@ const ForgotPassword = () => {
               />
               <p className="text-red-500">{errors.email?.message}</p>
             </div>
-            <Button variant="primary" size={"sm"}>
+            <Button variant="primary" size={"md"}>
               Reset Password
             </Button>
           </form>
-          <Button variant={"secondary"} size={"sm"}>
+          <Button variant={"secondary"} size={"md"}>
             Go Back
           </Button>
         </div>

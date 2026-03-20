@@ -9,7 +9,7 @@ import type {
 import type { buttonVariants } from "../components/ui/Button/ButtonVariants";
 
 export interface IconPathType {
-  iconPath: string;
+  iconPath?: string;
 }
 
 export interface ButtonProps
@@ -18,6 +18,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants>,
     IconPathType {
   children: ReactNode;
+  iconPlace?: string;
 }
 
 export interface NextBtnType {

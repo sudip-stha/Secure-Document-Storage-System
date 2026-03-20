@@ -8,17 +8,27 @@ const Button = ({
   variant,
   size,
   iconPath,
+  iconPlace,
   ...props
 }: ButtonProps) => {
-  console.log(props);
-
+  if (iconPlace == "front") {
+    return (
+      <button
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      >
+        <img src={iconPath} alt="" className={`${iconPath ? "w-3.5" : " "}`} />
+        {children}
+      </button>
+    );
+  }
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
       {children}
-      <img src={iconPath} alt="" className={`${iconPath ? "w-3.25" : " "}`} />
+      <img src={iconPath} alt="" className={`${iconPath ? "w-3.5" : " "}`} />
     </button>
   );
 };

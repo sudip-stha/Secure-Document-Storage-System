@@ -66,7 +66,7 @@ const LoginCard = () => {
           <p className="text-red-500 mb-6">{errors.password?.message}</p>
         </div>
 
-        <Button variant="primary" size={"sm"}>
+        <Button variant="primary" size={"md"}>
           Authenticate Identity
         </Button>
       </form>

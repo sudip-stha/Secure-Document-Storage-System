@@ -76,7 +76,7 @@ const PersonalInfo = ({ next }: NextBtnType) => {
           </Link>
           <Button
             variant={"primary"}
-            size={"sm"}
+            size={"md"}
             iconPath={"/icons/rightArrow.svg"}
           >
             Continue

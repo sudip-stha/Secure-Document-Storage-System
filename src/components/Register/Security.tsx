@@ -64,7 +64,7 @@ const Security = ({ next, back }: NextBtnType) => {
 
           <Button
             variant={"primary"}
-            size={"sm"}
+            size={"md"}
             iconPath={"/icons/rightArrow.svg"}
           >
             Continue
