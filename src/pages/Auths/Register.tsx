@@ -9,15 +9,15 @@ const Register = () => {
 
   const nextStep = (next: number) => {
     setComplete((prev) => {
-      if (complete.includes(next)) return prev;
-      return [...prev, next];
+      if (prev.includes(step)) return prev;
+      return [...prev, step];
     });
     setStep(next);
   };
 
   const getRadioColor = (currentStep: number) => {
-    if (step === currentStep) return "accent-blue-500";
     if (complete.includes(currentStep)) return "accent-green-600";
+    if (step === currentStep) return "accent-blue-500";
     return "accent-grey-500";
   };
 
@@ -41,7 +41,7 @@ const Register = () => {
               type="radio"
               name="personal"
               value="personal"
-              checked={step === 1 || complete.includes(2)}
+              checked={step === 1 || complete.includes(1)}
               className={`w-9 h-9 ${getRadioColor(1)}`}
               onClick={() => setStep(1)}
             />
@@ -55,7 +55,7 @@ const Register = () => {
               type="radio"
               name="security"
               value="security"
-              checked={step === 2 || complete.includes(3)}
+              checked={step === 2 || complete.includes(2)}
               className={`w-9 h-9 ${getRadioColor(2)}`}
             />
             Security
@@ -68,7 +68,7 @@ const Register = () => {
               type="radio"
               name="verification"
               value="verification"
-              checked={step === 3}
+              checked={step === 3 || complete.includes(3)}
               className={`w-9 h-9 ${getRadioColor(3)}`}
             />
             Verification

@@ -5,15 +5,15 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-action-primary text-white",
+        primary: "bg-action-primary text-white font-semibold",
         secondary:
-          "bg-authorisation-viewing-bg text-authorisation-viewing-border border border-authorisation-viewing-text",
+          "bg-authorisation-viewing-bg text-blue-400 font-semibold border border-authorisation-viewing-border",
         tertiary: "bg-top-surface text-text-primary",
       },
       size: {
-        sm: "px-[12px] py-[6px] gap-2",
+        sm: "px-[12px] py-[6px] gap-2 text-[12px]",
         md: "px-[16px] py-[14px] gap-4",
-        lg: "px-[28px] py-[8px]",
+        lg: "px-[28px] py-[8px] gap-1 text-[12px]",
       },
       defaultVariants: {
         type: "primary",

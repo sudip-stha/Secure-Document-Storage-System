@@ -18,11 +18,16 @@ export const securitySchema = z
       .string()
       .min(8, "Please enter at least 8 characters.")
       .regex(/[A-Z]/, "password must contain at least one uppercase letter.")
-      .regex(/[0-9]/, "password must contain at least one number."),
-    confirmPassword: z.string(),
+      .regex(/[0-9]/, "password must contain at least one number.")
+      .regex(
+        /[!.@#$%^&*(){},./|]/,
+        "Password must contain at least one special character.",
+      ),
+    confirmPassword: z.string().min(1, "Please enter a confirm password"),
   })
   .refine((value) => value.password === value.confirmPassword, {
-    message: "Don't match",
+    message: "Password don't match",
+    path: ["confirmPassword"],
   });
 
 export const loginSchema = z.object({

@@ -52,7 +52,6 @@ const Security = ({ next, back }: NextBtnType) => {
             iconPath="/icons/lock.svg"
           />
         </div>
-
         <div className="flex justify-between mt-[7.3rem]">
           <button
             onClick={back}

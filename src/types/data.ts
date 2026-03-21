@@ -7,6 +7,7 @@ import type {
   Path,
 } from "react-hook-form";
 import type { buttonVariants } from "../components/ui/Button/ButtonVariants";
+import React from "react";
 
 export interface IconPathType {
   iconPath?: string;
@@ -26,7 +27,8 @@ export interface NextBtnType {
   back?: () => void;
 }
 
-export interface InputFieldType<T extends FieldValues> extends IconPathType {
+export interface InputFieldType<T extends FieldValues>
+  extends IconPathType, React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   name: Path<T>;
   type: string;
@@ -38,4 +40,14 @@ export interface InputFieldType<T extends FieldValues> extends IconPathType {
 export interface NavItemType extends IconPathType {
   value: string;
   URL: string;
+}
+
+export interface DocumentTableListType {
+  id: number;
+  name: string;
+  status: string;
+  type: string;
+  size: number;
+  modified: number;
+  owner: string;
 }

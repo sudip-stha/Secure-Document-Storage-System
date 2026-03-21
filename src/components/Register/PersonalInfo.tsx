@@ -63,6 +63,11 @@ const PersonalInfo = ({ next }: NextBtnType) => {
             placeholder="Enter your email address"
             error={errors.email}
             iconPath="/icons/emailIcon.svg"
+            onInvalid={(e) =>
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
+                "The email address provided is wrong",
+              )
+            }
           />
         </div>
 

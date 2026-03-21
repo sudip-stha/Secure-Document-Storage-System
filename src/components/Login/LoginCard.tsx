@@ -34,6 +34,11 @@ const LoginCard = () => {
             {...register("email")}
             placeholder="Enter your email address"
             className="w-[24rem] bg-overlay-surface border border-strong-border rounded-sm pl-8 p-2 placeholder:text-text-tertiary"
+            onInvalid={(e) =>
+              (e.target as unknown as HTMLInputElement).setCustomValidity(
+                "The email address provided is wrong",
+              )
+            }
           />
           <img
             src="/icons/emailIcon.svg"

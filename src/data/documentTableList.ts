@@ -1,0 +1,101 @@
+import type { DocumentTableListType } from "../types/data";
+
+const tableTitle: string[] = ["Name", "Type", "Size", "Modified", "Owner"];
+
+const tableData: DocumentTableListType[] = [
+  {
+    id: 1,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 2,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 3,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 4,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 5,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 6,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 7,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 8,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 9,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+  {
+    id: 10,
+    name: "Q1_First Document",
+    status: "Owned",
+    type: "PDF Document",
+    size: 4.2,
+    modified: 4,
+    owner: "Misun Khatri",
+  },
+];
+
+export const documentTableList = {
+  tableTitle,
+  tableData,
+};

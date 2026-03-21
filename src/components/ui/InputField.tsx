@@ -9,6 +9,7 @@ const InputField = <T extends FieldValues>({
   placeholder,
   error,
   iconPath,
+  ...inputEventProps
 }: InputFieldType<T>) => {
   return (
     <div className="flex flex-col gap-3.5 relative ">
@@ -18,6 +19,7 @@ const InputField = <T extends FieldValues>({
         {...register(name)}
         placeholder={placeholder}
         className="w-88 bg-overlay-surface border border-strong-border rounded-sm pl-8 p-2 placeholder:text-text-tertiary"
+        {...inputEventProps}
       />
       <img
         src={iconPath}

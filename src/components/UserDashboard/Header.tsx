@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header className="flex justify-between bg-overlay-surface px-10 py-3">
-      <img src="/public/icons/Logo.svg" alt="" />
+      <img src="/icons/Logo.svg" alt="" />
       <div className="flex">
         <img
           src="/icons/searchIcon.svg"
