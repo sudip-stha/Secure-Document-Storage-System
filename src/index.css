@@ -42,4 +42,29 @@ body {
   --color-authorisation-viewing-bg: #0a1428;
   --color-authorisation-viewing-border: #1540b8;
   --color-authorisation-viewing-text: #80a8ff;
+
+  --color-authorisation-locked-border: #2e2e3a;
+  --color-authorisation-locked-bg: #1a1a22;
+
+  --color-authorisation-pending-bg: #1f1a0a;
+  --color-authorisation-pending-border: #3d3010;
+  --color-authorisation-pending-text: #d4a017;
+
+  --color-authorisation-approved-bg: #0a1f16;
+  --color-authorisation-approved-border: #0d3d26;
+  --color-authorisation-approved-text: #25c98e;
+
+  --color-authorisation-expired-bg: #1a100d;
+  --color-authorisation-expired-border: #3a1a14;
+
+  --color-status-success-50: #edfaf5;
+  --color-status-success-100: #d0f5e8;
+  --color-status-success-200: #a3edd3;
+  --color-status-success-300: #5eddb0;
+  --color-status-success-400: #25c98e;
+  --color-status-success-500: #12a870;
+  --color-status-success-600: #0d8558;
+  --color-status-success-700: #096640;
+  --color-status-success-800: #064a2e;
+  --color-status-success-900: #03301d;
 }
