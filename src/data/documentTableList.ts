@@ -32,7 +32,7 @@ const tableData: DocumentTableListType[] = [
   },
   {
     id: 4,
-    name: "Q1_First Document.xlsx",
+    name: "Q1_First Document.txt",
     status: "Owned",
     type: "PDF Document",
     size: 4.2,
@@ -59,7 +59,7 @@ const tableData: DocumentTableListType[] = [
   },
   {
     id: 7,
-    name: "Q1_First Document.xlsx",
+    name: "Q1_First Document.txt",
     status: "Pending",
     type: "PDF Document",
     size: 4.2,

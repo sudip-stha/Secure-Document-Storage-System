@@ -13,7 +13,7 @@ export const buttonVariants = cva(
       size: {
         sm: "px-[12px] py-[6px] gap-2 text-[12px]",
         md: "px-[16px] py-[14px] gap-4",
-        lg: "px-[28px] py-[8px] gap-1 text-[12px]",
+        lg: "px-[28px] py-[6px] gap-1 text-[12px]",
       },
       defaultVariants: {
         type: "primary",

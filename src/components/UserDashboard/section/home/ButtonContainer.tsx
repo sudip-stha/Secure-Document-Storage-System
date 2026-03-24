@@ -1,17 +1,26 @@
+import { useButtonAction } from "../../../../hooks/useButtonAction";
 import Button from "../../../ui/Button/Button";
+import ListGridToggleBtn from "../../../ui/Button/ListGridToggleBtn";
 
 const ButtonContainer = () => {
+  const uploadedFileModal = useButtonAction((state) => state.uploadedFileModal);
+  const newFolderModal = useButtonAction((state) => state.newFolderModal);
+  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
+
+  function handleUploadedFile() {
+    uploadedFileModal();
+    setIsModalOpen();
+  }
+
+  function handleCreateFolder() {
+    newFolderModal();
+    setIsModalOpen();
+  }
+
   return (
-    <div className="flex justify-between">
+    <div className="min-w-[76.3vw] flex justify-between">
       <div className="flex gap-2 items-center">
-        <div className="bg-top-surface flex gap-3.25 p-0.5 rounded-sm">
-          <div className="p-2 rounded-sm ">
-            <img src="/icons/listIcon.svg" alt="" className="w-2" />
-          </div>
-          <div className="p-2 rounded-sm ">
-            <img src="/icons/gridIcon.png" alt="" className="w-2" />
-          </div>
-        </div>
+        <ListGridToggleBtn />
         <Button
           variant={"tertiary"}
           size={"sm"}
@@ -35,7 +44,7 @@ const ButtonContainer = () => {
           size={"sm"}
           iconPath="/icons/plusIcon.svg"
           iconPlace="front"
-          className=""
+          onClick={handleCreateFolder}
         >
           New Folder{" "}
         </Button>
@@ -44,6 +53,7 @@ const ButtonContainer = () => {
           size={"lg"}
           iconPath="/icons/uploadIcon.svg"
           iconPlace="front"
+          onClick={handleUploadedFile}
         >
           Upload
         </Button>
