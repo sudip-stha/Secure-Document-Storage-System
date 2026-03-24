@@ -3,8 +3,8 @@ import NavItem from "../ui/NavItem";
 
 const Aside = () => {
   return (
-    <nav className="h-[89.7vh] px-5 py-3 bg-elevated-surface text-text-secondary">
-      <ul className="flex flex-col">
+    <nav className="px-5 py-3 bg-elevated-surface text-text-secondary">
+      <ul className={`flex flex-col`}>
         <li>
           <NavItem
             value="Home"

@@ -50,4 +50,5 @@ export interface DocumentTableListType {
   size: number;
   modified: number;
   owner: string;
+  dotIcon: string;
 }

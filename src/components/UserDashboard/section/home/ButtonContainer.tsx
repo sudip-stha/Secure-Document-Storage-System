@@ -3,13 +3,13 @@ import Button from "../../../ui/Button/Button";
 const ButtonContainer = () => {
   return (
     <div className="flex justify-between">
-      <div>
+      <div className="flex gap-2 items-center">
         <div className="bg-top-surface flex gap-3.25 p-0.5 rounded-sm">
           <div className="p-2 rounded-sm ">
-            <img src="/icons/listIcon.svg" alt="" className="w-5" />
+            <img src="/icons/listIcon.svg" alt="" className="w-2" />
           </div>
           <div className="p-2 rounded-sm ">
-            <img src="/icons/gridIcon.png" alt="" className="w-5" />
+            <img src="/icons/gridIcon.png" alt="" className="w-2" />
           </div>
         </div>
         <Button
@@ -29,7 +29,7 @@ const ButtonContainer = () => {
         </Button>
       </div>
 
-      <div>
+      <div className="flex gap-2 items-center">
         <Button
           variant={"secondary"}
           size={"sm"}

@@ -11,6 +11,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 5,
@@ -47,6 +51,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 7,
@@ -65,6 +71,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 8,
@@ -74,6 +81,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 9,
@@ -83,6 +91,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
   {
     id: 10,
@@ -92,6 +101,7 @@ const tableData: DocumentTableListType[] = [
     size: 4.2,
     modified: 4,
     owner: "Misun Khatri",
+    dotIcon: "/icon/dotIcon.svg",
   },
 ];
 

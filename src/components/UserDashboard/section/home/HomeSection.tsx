@@ -1,3 +1,4 @@
+import DocumentTableList from "../../../ui/DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../../../ui/DocumentTable/DocummentTableTitle";
 import ButtonContainer from "./ButtonContainer";
 
@@ -11,7 +12,10 @@ const HomeSection = () => {
       </div>
 
       <ButtonContainer />
+      <div>
       <DocummentTableTitle />
+      <DocumentTableList />
+      </div>
     </div>
   );
 };
