@@ -2,7 +2,7 @@ import NameSortingItem from "../NameSortingItem";
 
 const NameSortingModal = () => {
   return (
-    <div className="backdrop-blur-xl bg-white/10 text-text-secondary px-2 py-3 border border-text-primary rounded-lg">
+    <div className="backdrop-blur-md bg-elevated-surface/10 text-text-secondary px-2 py-3 border border-text-primary rounded-lg">
       <ul className="cursor-pointer">
         <NameSortingItem sortingValue="Name (A to Z)" />
         <NameSortingItem sortingValue="Name (Z to A)" />

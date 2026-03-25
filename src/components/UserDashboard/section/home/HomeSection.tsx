@@ -4,7 +4,9 @@ import DocumentTableList from "../../../ui/DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../../../ui/DocumentTable/DocummentTableTitle";
 import CreateFolderModal from "../../../ui/modals/CreateFolderModal";
 import DocumentUploadModal from "../../../ui/modals/DocumentUploadModal";
-import NameSortingModal from "../../../ui/modals/nameSortingModal";
+import FilterModal from "../../../ui/modals/filterModal";
+import NameSortingModal from "../../../ui/modals/NameSortingModal";
+
 import ButtonContainer from "./ButtonContainer";
 
 const HomeSection = () => {
@@ -44,6 +46,12 @@ const HomeSection = () => {
           onClick={handleCloseModal}
         >
           <NameSortingModal />
+        </div>
+      )}
+
+      {buttonAction === "filter" && (
+        <div className="fixed top-51.25 left-118 z-30">
+          <FilterModal />
         </div>
       )}
 

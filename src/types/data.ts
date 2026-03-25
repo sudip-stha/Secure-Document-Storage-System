@@ -64,3 +64,8 @@ export interface UseButtonActionType {
   setIsModalOpen: (action: boolean) => void;
   setIsListBtnActive: (activeValue: string) => void;
 }
+
+export interface UseFilterActionType {
+  filterAction: string;
+  setFilterAction: (action: string) => void;
+}

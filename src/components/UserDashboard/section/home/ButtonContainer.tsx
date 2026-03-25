@@ -20,6 +20,10 @@ const ButtonContainer = () => {
     setButtonAction("nameSorting");
   }
 
+  function handleFilter() {
+    setButtonAction("filter");
+  }
+
   return (
     <div className="min-w-[75.4vw] flex justify-between">
       <div className="flex gap-2 items-center">
@@ -36,7 +40,8 @@ const ButtonContainer = () => {
           variant={"tertiary"}
           iconPath="/icons/filterIcon.svg"
           iconPlace="front"
-          className="px-5 py-1.5 gap-2 text-[12px]"
+          className="px-4 py-1.5 gap-2 text-[12px]"
+          onClick={handleFilter}
         >
           Filter
         </Button>
