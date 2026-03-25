@@ -5,7 +5,7 @@ export default function getFileIcon({ fileName }: FileNameType) {
 
   switch (fileType) {
     case "txt":
-      return "/icons/txtfileIcon.png";
+      return "/icons/txtFileIcon.png";
 
     case "pdf":
       return "/icons/pdfFileIcon.svg";

@@ -59,6 +59,8 @@ export interface FileNameType {
 export interface UseButtonActionType {
   buttonAction: string;
   isModalOpen: boolean;
+  isListBtnActive: string;
   setButtonAction: (action: string) => void;
   setIsModalOpen: (action: boolean) => void;
+  setIsListBtnActive: (activeValue: string) => void;
 }

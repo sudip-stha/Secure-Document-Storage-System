@@ -1,4 +1,5 @@
 import { useButtonAction } from "../../../../hooks/useButtonAction";
+import DocumentTableGrid from "../../../ui/DocumentTable/DocumentTableGrid";
 import DocumentTableList from "../../../ui/DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../../../ui/DocumentTable/DocummentTableTitle";
 import CreateFolderModal from "../../../ui/modals/CreateFolderModal";
@@ -9,6 +10,7 @@ const HomeSection = () => {
   const buttonAction = useButtonAction((state) => state.buttonAction);
   const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
   const setButtonAction = useButtonAction((state) => state.setButtonAction);
+  const isListBtnActive = useButtonAction((state) => state.isListBtnActive);
 
   function handleCloseModal() {
     setIsModalOpen(false);
@@ -26,7 +28,7 @@ const HomeSection = () => {
         </div>
       )}
 
-       {buttonAction === "newFolder" && (
+      {buttonAction === "newFolder" && (
         <div
           className="fixed inset-0 flex justify-center items-center z-30"
           onClick={handleCloseModal}
@@ -35,7 +37,6 @@ const HomeSection = () => {
         </div>
       )}
 
-
       <div className="flex gap-2.25 py-6.5">
         <img src={"/icons/documentHomeIcon.svg"} alt="" />
         <img src={"/icons/greaterIcon.svg"} alt="" />
@@ -43,10 +44,15 @@ const HomeSection = () => {
       </div>
 
       <ButtonContainer />
-      <div>
-        <DocummentTableTitle />
-        <DocumentTableList />
-      </div>
+
+      {isListBtnActive == "list" ? (
+        <div>
+          <DocummentTableTitle />
+          <DocumentTableList />
+        </div>
+      ) : (
+        <DocumentTableGrid />
+      )}
     </div>
   );
 };
