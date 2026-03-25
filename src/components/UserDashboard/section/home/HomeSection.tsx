@@ -4,6 +4,7 @@ import DocumentTableList from "../../../ui/DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../../../ui/DocumentTable/DocummentTableTitle";
 import CreateFolderModal from "../../../ui/modals/CreateFolderModal";
 import DocumentUploadModal from "../../../ui/modals/DocumentUploadModal";
+import NameSortingModal from "../../../ui/modals/nameSortingModal";
 import ButtonContainer from "./ButtonContainer";
 
 const HomeSection = () => {
@@ -34,6 +35,15 @@ const HomeSection = () => {
           onClick={handleCloseModal}
         >
           <CreateFolderModal />
+        </div>
+      )}
+
+      {buttonAction === "nameSorting" && (
+        <div
+          className="fixed top-51.25 left-95 z-30"
+          onClick={handleCloseModal}
+        >
+          <NameSortingModal />
         </div>
       )}
 
