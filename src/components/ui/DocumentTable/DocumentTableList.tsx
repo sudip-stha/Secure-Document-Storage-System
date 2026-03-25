@@ -50,9 +50,11 @@ const DocumentTableList = () => {
           <span className="w-21">{value.size}</span>
           <span className="w-31">{value.modified} hrs ago</span>
           <span className="w-33">{value.owner}</span>
-          <span>
-            <img src="/icons/dotIcon.svg" alt="" />
-          </span>
+          {value.status === "Owned" && (
+            <span>
+              <img src="/icons/dotIcon.svg" alt="" />
+            </span>
+          )}
         </div>
       ))}
     </div>
