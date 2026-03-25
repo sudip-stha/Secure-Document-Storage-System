@@ -1,11 +1,33 @@
+import { useState, type ChangeEvent } from "react";
 import { useButtonAction } from "../../../hooks/useButtonAction";
 import Button from "../Button/Button";
 
 const DocumentUploadModal = () => {
+  const [uploadedFile, setUploadedFile] = useState({
+    id: "",
+    name: "",
+    status: "",
+    type: "",
+    size: "",
+    modified: "",
+    owner: "",
+  });
+
   const setButtonAction = useButtonAction((state) => state.setButtonAction);
   const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
 
   function handleCloseModal() {
+    setButtonAction("");
+    setIsModalOpen(false);
+  }
+
+  function handleUploadedFileChange(e: ChangeEvent<HTMLInputElement>) {
+    const filePath = e.target.files![0];
+    const fileName = filePath.name;
+    const fileExtension = fileName.split(".").pop()?.toLowerCase();
+    const fileSize = filePath.size;
+    const fileURL = URL.createObjectURL(filePath);
+
     setButtonAction("");
     setIsModalOpen(false);
   }
@@ -39,6 +61,12 @@ const DocumentUploadModal = () => {
         </div>
         <p className="font-dmsans text-[16px] text-text-secondary">or</p>
         <Button variant={"secondary"} className="font-medium px-7.5 py-3">
+          <input
+            type="file"
+            accept=".pdf,.docx,.txt"
+            onChange={handleUploadedFileChange}
+            className="opacity-0 absolute"
+          />
           Browse Files
         </Button>
       </div>
