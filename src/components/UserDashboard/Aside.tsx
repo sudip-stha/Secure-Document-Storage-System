@@ -3,7 +3,7 @@ import NavItem from "../ui/NavItem";
 
 const Aside = () => {
   return (
-    <nav className="min-h-[90.8vh] min-w-[18.5vw] px-5 py-3 bg-elevated-surface text-text-secondary">
+    <nav className="min-h-[90.8vh] min-w-[18.3vw] px-5 py-3 bg-elevated-surface text-text-secondary">
       <ul className={`flex flex-col`}>
         <li>
           <NavItem

@@ -55,3 +55,10 @@ export interface DocumentTableListType {
 export interface FileNameType {
   fileName: string;
 }
+
+export interface UseButtonActionType {
+  buttonAction: string;
+  isModalOpen: boolean;
+  setButtonAction: (action: string) => void;
+  setIsModalOpen: (action: boolean) => void;
+}

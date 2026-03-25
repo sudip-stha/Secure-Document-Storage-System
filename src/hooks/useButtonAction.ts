@@ -1,10 +1,9 @@
 import { create } from "zustand";
+import type { UseButtonActionType } from "../types/data";
 
-export const useButtonAction = create((set) => ({
+export const useButtonAction = create<UseButtonActionType>((set) => ({
   buttonAction: "",
   isModalOpen: false,
-  uploadedFileModal: () => set(() => ({ buttonAction: "uploaded" })),
-  newFolderModal: () => set(() => ({ buttonAction: "newFolder" })),
-  filterModal: () => set(() => ({ buttonAction: "filter" })),
-  setIsModalopen: () => set(() => ({ isModalOpen: true })),
+  setButtonAction: (action: string) => set(() => ({ buttonAction: action })),
+  setIsModalOpen: (action: boolean) => set(() => ({ isModalOpen: action })),
 }));

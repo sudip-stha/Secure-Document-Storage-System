@@ -3,22 +3,21 @@ import Button from "../../../ui/Button/Button";
 import ListGridToggleBtn from "../../../ui/Button/ListGridToggleBtn";
 
 const ButtonContainer = () => {
-  const uploadedFileModal = useButtonAction((state) => state.uploadedFileModal);
-  const newFolderModal = useButtonAction((state) => state.newFolderModal);
+  const setButtonAction = useButtonAction((state) => state.setButtonAction);
   const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
 
   function handleUploadedFile() {
-    uploadedFileModal();
-    setIsModalOpen();
+    setButtonAction("uploaded");
+    setIsModalOpen(true);
   }
 
   function handleCreateFolder() {
-    newFolderModal();
-    setIsModalOpen();
+    setButtonAction("newFolder");
+    setIsModalOpen(true);
   }
 
   return (
-    <div className="min-w-[76.3vw] flex justify-between">
+    <div className="min-w-[75.4vw] flex justify-between">
       <div className="flex gap-2 items-center">
         <ListGridToggleBtn />
         <Button
