@@ -1,11 +1,11 @@
+import Home from "./pages/Auths/Home";
 import Authentication from "./routes/AuthPageRoute";
-import UserPageRoute from "./routes/UserPageRoute";
 
 function App() {
   return (
     <>
       <Authentication />
-      <UserPageRoute />
+      <Home />
     </>
   );
 }
