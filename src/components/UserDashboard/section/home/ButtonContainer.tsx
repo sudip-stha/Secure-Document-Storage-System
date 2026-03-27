@@ -25,7 +25,7 @@ const ButtonContainer = () => {
   }
 
   return (
-    <div className="min-w-[75.4vw] flex justify-between">
+    <div className="min-w-[75.4vw] flex justify-between z-50">
       <div className="flex gap-2 items-center">
         <ListGridToggleBtn />
         <Button

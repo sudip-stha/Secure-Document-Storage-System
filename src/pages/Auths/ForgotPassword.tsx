@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { loginSchema, type LoginData } from "../../lib/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../../components/ui/Button/Button";
+import Heading1 from "../../components/ui/Heading1";
 
 const ForgotPassword = () => {
   const {
@@ -21,9 +22,7 @@ const ForgotPassword = () => {
   return (
     <div className="h-screen flex justify-center items-center bg-black">
       <div className="flex flex-col gap-12 ">
-        <h1 className="font-poppins font-bold text-[24px] text-white">
-          Forgot your Password?
-        </h1>
+        <Heading1 value="Forgot your Password?" />
         <div className="flex gap-5 flex-col bg-raised-surface border border-strong-border rounded-xl px-14 py-12">
           <p className="font-dmsans font-medium text-[14px] text-text-primary w-[24rem]">
             Please enter your email address again to reset the password

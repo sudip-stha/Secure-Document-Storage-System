@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
-import Button from "../Button/Button";
+import Button from "../../ui/Button/Button";
 import { useButtonAction } from "../../../hooks/useButtonAction";
+import Heading1 from "../../ui/Heading1";
 
 const CreateFolderModal = () => {
   const { register, handleSubmit } = useForm();
@@ -22,9 +23,7 @@ const CreateFolderModal = () => {
     >
       <div className="flex justify-between items-start">
         <div className="flex flex-col gap-0.5">
-          <h1 className="font-poppins font-bold text-[24px] text-text-primary">
-            Create a New Folder
-          </h1>
+          <Heading1 value="Create a New Folder" />
           <p className="font-dmsans text-[14px] text-warm-gray-200">
             Create a new folder to organize your files
           </p>

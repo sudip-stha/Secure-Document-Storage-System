@@ -5,7 +5,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-action-primary text-white font-semibold",
+        primary: "bg-action-primary text-white font-medium",
         secondary:
           "bg-authorisation-viewing-bg text-blue-400 font-semibold border border-authorisation-viewing-border",
         tertiary: "bg-top-surface text-text-primary",

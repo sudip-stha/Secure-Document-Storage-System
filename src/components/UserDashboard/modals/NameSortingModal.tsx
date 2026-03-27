@@ -1,8 +1,11 @@
-import NameSortingItem from "../NameSortingItem";
+import NameSortingItem from "../../ui/NameSortingItem";
 
 const NameSortingModal = () => {
   return (
-    <div className="backdrop-blur-md bg-elevated-surface/10 text-text-secondary px-2 py-3 border border-text-primary rounded-lg">
+    <div
+      className="backdrop-blur-md bg-elevated-surface/10 text-text-secondary px-2 py-3 border border-text-primary rounded-lg"
+      onClick={(e) => e.stopPropagation()}
+    >
       <ul className="cursor-pointer">
         <NameSortingItem sortingValue="Name (A to Z)" />
         <NameSortingItem sortingValue="Name (Z to A)" />

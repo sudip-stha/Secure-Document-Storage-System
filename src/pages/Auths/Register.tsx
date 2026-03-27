@@ -2,6 +2,7 @@ import { Activity, useState } from "react";
 import PersonalInfo from "../../components/Register/PersonalInfo";
 import Security from "../../components/Register/Security";
 import Verification from "../../components/Register/Verification";
+import Heading1 from "../../components/ui/Heading1";
 
 const Register = () => {
   const [step, setStep] = useState(1);
@@ -25,9 +26,7 @@ const Register = () => {
     <div className="h-screen flex justify-center items-center bg-black">
       <div className="flex flex-col gap-12 items-center ">
         <div className="flex flex-col gap-2 items-center ">
-          <h1 className="font-poppins font-bold text-[24px] text-white">
-            Register Your Account
-          </h1>
+          <Heading1 value="Register Your Account" />
           <p className="font-dmsans text-[16px] text-text-secondary">
             Create an account (Admin Approval Required)
           </p>

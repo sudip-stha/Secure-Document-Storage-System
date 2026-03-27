@@ -1,12 +1,11 @@
 import { useButtonAction } from "../../../../hooks/useButtonAction";
-import DocumentTableGrid from "../../../ui/DocumentTable/DocumentTableGrid";
-import DocumentTableList from "../../../ui/DocumentTable/DocumentTableList";
-import DocummentTableTitle from "../../../ui/DocumentTable/DocummentTableTitle";
-import CreateFolderModal from "../../../ui/modals/CreateFolderModal";
-import DocumentUploadModal from "../../../ui/modals/DocumentUploadModal";
-import FilterModal from "../../../ui/modals/filterModal";
-import NameSortingModal from "../../../ui/modals/NameSortingModal";
-
+import CreateFolderModal from "../../modals/CreateFolderModal";
+import DocumentUploadModal from "../../modals/DocumentUploadModal";
+import FilterModal from "../../modals/filterModal";
+import NameSortingModal from "../../modals/NameSortingModal";
+import DocumentTableGrid from "../DocumentTable/DocumentTableGrid";
+import DocumentTableList from "../DocumentTable/DocumentTableList";
+import DocummentTableTitle from "../DocumentTable/DocummentTableTitle";
 import ButtonContainer from "./ButtonContainer";
 
 const HomeSection = () => {
@@ -41,17 +40,18 @@ const HomeSection = () => {
       )}
 
       {buttonAction === "nameSorting" && (
-        <div
-          className="fixed top-51.25 left-95 z-30"
-          onClick={handleCloseModal}
-        >
-          <NameSortingModal />
+        <div className="fixed inset-0 z-20" onClick={handleCloseModal}>
+          <div className="fixed top-51.25 left-95 z-30">
+            <NameSortingModal />
+          </div>
         </div>
       )}
 
       {buttonAction === "filter" && (
-        <div className="fixed top-51.25 left-118 z-30">
-          <FilterModal />
+        <div className="fixed inset-0 z-20" onClick={handleCloseModal}>
+          <div className="fixed top-51.25 left-118 z-30">
+            <FilterModal />
+          </div>
         </div>
       )}
 

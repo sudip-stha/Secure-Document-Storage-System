@@ -60,12 +60,32 @@ export interface UseButtonActionType {
   buttonAction: string;
   isModalOpen: boolean;
   isListBtnActive: string;
+  isRowHover: number | null;
   setButtonAction: (action: string) => void;
   setIsModalOpen: (action: boolean) => void;
   setIsListBtnActive: (activeValue: string) => void;
+  setIsRowHover: (id: number | null) => void;
 }
 
 export interface UseFilterActionType {
   filterAction: string;
   setFilterAction: (action: string) => void;
+  openRowId: number | null;
+  setOpenRowId: (id: number | null) => void;
+}
+
+export interface FilterHeaderBtnType {
+  filterTypeValue: string;
+}
+
+export interface NameSortingItemType {
+  sortingValue: string;
+}
+
+export interface ThreeDotListItemType extends IconPathType {
+  listItem: string;
+}
+
+export interface Heading1Type {
+  value: string;
 }

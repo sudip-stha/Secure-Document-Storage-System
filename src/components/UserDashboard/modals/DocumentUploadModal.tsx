@@ -1,6 +1,7 @@
 import { useState, type ChangeEvent } from "react";
 import { useButtonAction } from "../../../hooks/useButtonAction";
-import Button from "../Button/Button";
+import Button from "../../ui/Button/Button";
+import Heading1 from "../../ui/Heading1";
 
 const DocumentUploadModal = () => {
   const [uploadedFile, setUploadedFile] = useState({
@@ -39,9 +40,7 @@ const DocumentUploadModal = () => {
     >
       <div className="flex justify-between items-start">
         <div className="flex flex-col gap-0.5">
-          <h1 className="font-poppins font-bold text-[24px] text-text-primary">
-            Upload Document
-          </h1>
+          <Heading1 value="Upload Document" />
           <p className="font-dmsans text-[14px] text-warm-gray-200">
             Upload a new document to the document storage
           </p>

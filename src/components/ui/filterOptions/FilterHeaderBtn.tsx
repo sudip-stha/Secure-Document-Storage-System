@@ -1,6 +1,7 @@
 import { useFilterAction } from "../../../hooks/useFilterAction";
+import type { FilterHeaderBtnType } from "../../../types/data";
 
-const FilterHeaderBtn = ({ filterTypeValue }) => {
+const FilterHeaderBtn = ({ filterTypeValue }: FilterHeaderBtnType) => {
   const setFilterAction = useFilterAction((state) => state.setFilterAction);
   const filterAction = useFilterAction((state) => state.filterAction);
 
