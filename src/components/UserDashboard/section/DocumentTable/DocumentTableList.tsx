@@ -6,12 +6,11 @@ import { statusStyle } from "../../../../constants/statusStyle";
 import { statusIcon } from "../../../../constants/statusIcon";
 import { useButtonAction } from "../../../../hooks/useButtonAction";
 import Button from "../../../ui/Button/Button";
+import RequestAccessModal from "../../modals/requestAccessModal/RequestAccessModal";
 import { useState } from "react";
-import RequestAccessModal from "../../modals/RequestAccessModal";
 
 const DocumentTableList = () => {
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
-
   const setOpenRowId = useFilterAction((state) => state.setOpenRowId);
   const openRowId = useFilterAction((state) => state.openRowId);
   const isRowHover = useButtonAction((state) => state.isRowHover);
@@ -22,11 +21,14 @@ const DocumentTableList = () => {
     setOpenRowId(openRowId === id ? null : id);
   }
 
+  const requestDocumentDetails = documentTableList.tableData.filter(
+    (item) => item.id === isRowHover,
+  );
+
   function handleCloseModal() {
     setOpenRowId(null);
     setIsRequestModalOpen(false);
     setIsModalOpen(false);
-    
   }
 
   function handleRequestAccess() {
@@ -43,10 +45,13 @@ const DocumentTableList = () => {
       {/*open request modal */}
       {isRequestModalOpen && (
         <div
-          className="fixed inset-0 flex justify-center items-center z-30"
+          className="fixed inset-0 flex justify-center items-center z-40"
           onClick={handleCloseModal}
         >
-          <RequestAccessModal />
+          <RequestAccessModal
+            requestDocumentDetails={requestDocumentDetails}
+            onClose={() => setIsRequestModalOpen(false)}
+          />
         </div>
       )}
 

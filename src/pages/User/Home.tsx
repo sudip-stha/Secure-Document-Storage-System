@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Header />
       <Main />
-      {isModalOpen && <div className="fixed inset-0 bg-cold-gray-700 opacity-55" />}
+      {isModalOpen && <div className="fixed inset-0 bg-cold-gray-700 opacity-55 z-20" />}
     </div>
   );
 };

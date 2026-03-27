@@ -52,6 +52,11 @@ export interface DocumentTableListType {
   owner: string;
 }
 
+export interface requestDocumentDetailsType {
+  requestDocumentDetails: DocumentTableListType;
+  onClose: () => void;
+}
+
 export interface FileNameType {
   fileName: string;
 }
@@ -86,6 +91,6 @@ export interface ThreeDotListItemType extends IconPathType {
   listItem: string;
 }
 
-export interface Heading1Type {
+export interface HeadingType {
   value: string;
 }

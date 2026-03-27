@@ -1,6 +1,6 @@
-import type { Heading1Type } from "../../types/data";
+import type { HeadingType } from "../../types/data";
 
-const Heading1 = ({ value }: Heading1Type) => {
+const Heading1 = ({ value }: HeadingType) => {
   return (
     <h1 className="font-poppins font-bold text-[24px] text-text-primary">
       {value}
