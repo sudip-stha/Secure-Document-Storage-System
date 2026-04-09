@@ -3,7 +3,7 @@ import ThreeDotListItem from "../../ui/ThreeDotListItem";
 const ThreeDotModal = () => {
   return (
     <div
-      className="max-w-66 bg-top-surface py-6 border border-default-border rounded-xl font-dmsans text-[16px] text-white"
+      className="min-w-65 bg-top-surface py-6 border border-default-border rounded-xl font-dmsans text-[16px] text-white"
       onClick={(e) => e.stopPropagation()}
     >
       <h6 className="font-semibold border-b-2 border-warm-gray-600 tracking-wider px-6 pb-3">

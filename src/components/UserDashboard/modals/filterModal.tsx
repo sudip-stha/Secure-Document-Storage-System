@@ -15,9 +15,7 @@ const FilterModal = () => {
         <h3 className="font-poppins font-bold text-[16px] text-white">
           Filters
         </h3>
-        <Button variant={"primary"} size={"sm"}>
-          Save View
-        </Button>
+        <Button size={"sm"}>Save View</Button>
       </div>
       <div className="mr-30 flex flex-col gap-5">
         <Types />

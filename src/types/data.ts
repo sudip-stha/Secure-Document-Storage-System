@@ -65,10 +65,12 @@ export interface UseButtonActionType {
   buttonAction: string;
   isModalOpen: boolean;
   isListBtnActive: string;
+  isRequestBtnActive: string;
   isRowHover: number | null;
   setButtonAction: (action: string) => void;
   setIsModalOpen: (action: boolean) => void;
   setIsListBtnActive: (activeValue: string) => void;
+  setIsRequestBtnActive: (actionValue: string) => void;
   setIsRowHover: (id: number | null) => void;
 }
 

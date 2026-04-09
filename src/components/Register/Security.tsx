@@ -61,11 +61,7 @@ const Security = ({ next, back }: NextBtnType) => {
             Back
           </button>
 
-          <Button
-            variant={"primary"}
-            size={"md"}
-            iconPath={"/icons/rightArrow.svg"}
-          >
+          <Button size={"md"} iconPath={"/icons/rightArrow.svg"}>
             Continue
           </Button>
         </div>

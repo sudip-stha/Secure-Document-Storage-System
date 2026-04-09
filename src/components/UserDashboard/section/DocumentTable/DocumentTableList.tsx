@@ -75,11 +75,7 @@ const DocumentTableList = () => {
           <div className="w-29.75">
             {isRowHover === value.id && (
               <span>
-                <Button
-                  variant={"primary"}
-                  size={"sm"}
-                  onClick={handleRequestAccess}
-                >
+                <Button size={"sm"} onClick={handleRequestAccess}>
                   Request Access
                 </Button>
               </span>
@@ -109,7 +105,7 @@ const DocumentTableList = () => {
             >
               {openRowId === value.id && (
                 <div className="absolute inset-0 z-20">
-                  <div className="absolute -left-62.5 ">
+                  <div className="absolute -left-64.5 ">
                     <ThreeDotModal />
                   </div>
                 </div>

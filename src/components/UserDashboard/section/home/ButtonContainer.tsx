@@ -1,6 +1,6 @@
 import { useButtonAction } from "../../../../hooks/useButtonAction";
 import Button from "../../../ui/Button/Button";
-import ListGridToggleBtn from "../../../ui/Button/ListGridToggleBtn";
+import ListGridBtn from "../../../ui/Button/ListGridBtn";
 
 const ButtonContainer = () => {
   const setButtonAction = useButtonAction((state) => state.setButtonAction);
@@ -27,7 +27,7 @@ const ButtonContainer = () => {
   return (
     <div className="min-w-[75.4vw] flex justify-between">
       <div className="flex gap-2 items-center">
-        <ListGridToggleBtn />
+        <ListGridBtn />
         <Button
           variant={"tertiary"}
           size={"sm"}
@@ -58,7 +58,6 @@ const ButtonContainer = () => {
           New Folder{" "}
         </Button>
         <Button
-          variant={"primary"}
           size={"lg"}
           iconPath="/icons/uploadIcon.svg"
           iconPlace="front"

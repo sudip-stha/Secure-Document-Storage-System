@@ -41,12 +41,7 @@ const RequestAccessModal = ({
 
       <div className="flex flex-col gap-3">
         <RequestModalNote />
-        <Button
-          variant={"primary"}
-          size={"md"}
-          iconPath="/icons/submitIcon.svg"
-          iconPlace="front"
-        >
+        <Button size={"md"} iconPath="/icons/submitIcon.svg" iconPlace="front">
           Submit Request
         </Button>
       </div>

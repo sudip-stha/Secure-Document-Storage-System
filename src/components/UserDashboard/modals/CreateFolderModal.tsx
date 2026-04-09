@@ -55,10 +55,7 @@ const CreateFolderModal = () => {
             }
           />
         </div>
-        <Button
-          variant={"primary"}
-          className="font-semibold text-[12px] px-4.75 py-2"
-        >
+        <Button className="font-semibold text-[12px] px-4.75 py-2">
           Create Folder
         </Button>
       </form>
