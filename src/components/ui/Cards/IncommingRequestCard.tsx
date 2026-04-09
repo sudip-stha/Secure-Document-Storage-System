@@ -1,6 +1,12 @@
+import type { RequestCardType } from "../../../types/data";
 import Button from "../Button/Button";
 
-const IncommingRequestCard = ({ filename, fileIconPath, owner, message }) => {
+const IncommingRequestCard = ({
+  filename,
+  fileIconPath,
+  owner,
+  message,
+}: RequestCardType) => {
   return (
     <div className="min-w-6xl font-dmsans bg-elevated-surface rounded-2xl border border-subtle-border p-6">
       <div className="flex justify-between">

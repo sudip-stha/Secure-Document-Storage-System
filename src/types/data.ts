@@ -96,3 +96,11 @@ export interface ThreeDotListItemType extends IconPathType {
 export interface HeadingType {
   value: string;
 }
+
+export interface RequestCardType {
+  filename: string;
+  fileIconPath: string;
+  owner: string;
+  message: string;
+  status?: string;
+}

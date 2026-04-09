@@ -1,7 +1,13 @@
 import { statusIcon } from "../../../constants/statusIcon";
 import { statusStyle } from "../../../constants/statusStyle";
+import type { RequestCardType } from "../../../types/data";
 
-const MyRequestCard = ({ filename, fileIconPath, message, status }) => {
+const MyRequestCard = ({
+  filename,
+  fileIconPath,
+  message,
+  status,
+}: RequestCardType) => {
   return (
     <div className="min-w-6xl flex flex-col gap-6 font-dmsans bg-elevated-surface rounded-2xl border border-subtle-border p-6">
       <div className="flex justify-between">
