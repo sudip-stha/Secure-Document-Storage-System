@@ -104,3 +104,8 @@ export interface RequestCardType {
   message: string;
   status?: string;
 }
+
+export interface FilePreviewHeader {
+  fileName: string;
+  fileOwner: string;
+}

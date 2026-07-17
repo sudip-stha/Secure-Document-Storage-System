@@ -22,6 +22,7 @@ const Header = () => {
           alt="This is a notification icon."
           className="w-5"
         />
+
         <img
           src="/icons/profilePicture.png"
           alt="This is a profile picture."

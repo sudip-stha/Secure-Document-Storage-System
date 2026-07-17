@@ -8,6 +8,7 @@ import { useButtonAction } from "../../../../hooks/useButtonAction";
 import Button from "../../../ui/Button/Button";
 import RequestAccessModal from "../../modals/requestAccessModal/RequestAccessModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const DocumentTableList = () => {
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
@@ -49,7 +50,7 @@ const DocumentTableList = () => {
           onClick={handleCloseModal}
         >
           <RequestAccessModal
-            requestDocumentDetails={requestDocumentDetails}
+            requestDocumentDetails={requestDocumentDetails[0]}
             onClose={() => setIsRequestModalOpen(false)}
           />
         </div>
@@ -59,7 +60,7 @@ const DocumentTableList = () => {
       {documentTableList.tableData.map((value) => (
         <div
           key={value.id}
-          className={`flex gap-6 items-center text-text-secondary font-dmsans text-[14px] px-8 py-4 border-[1.5px] border-t-0 border-strong-border last:rounded-b-2xl hover:bg-top-surface`}
+          className={`flex gap-6 items-center text-text-secondary font-dmsans text-[14px] px-8 py-4 border-[1.5px] border-t-0 border-strong-border last:rounded-b-2xl hover:bg-top-surface hover:cursor-pointer`}
           onMouseEnter={() => setIsRowHover(value.id)}
           onMouseLeave={() => setIsRowHover(null)}
         >
@@ -69,7 +70,7 @@ const DocumentTableList = () => {
               alt=""
               className="h-4"
             />
-            {value.name}
+            <Link to={`/user/file/${value.id}`}>{value.name}</Link>
           </span>
 
           <div className="w-29.75">
