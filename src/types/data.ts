@@ -53,7 +53,7 @@ export interface DocumentTableListType {
 }
 
 export interface requestDocumentDetailsType {
-  requestDocumentDetails: DocumentTableListType;
+  requestDocumentDetails: DocumentTableListType | null | undefined;
   onClose: () => void;
 }
 
@@ -105,7 +105,7 @@ export interface RequestCardType {
   status?: string;
 }
 
-export interface FilePreviewHeader {
-  fileName: string;
-  fileOwner: string;
+export interface FilePreviewHeaderProps {
+  fileName?: string;
+  fileOwner?: string;
 }

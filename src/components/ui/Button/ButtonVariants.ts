@@ -5,11 +5,13 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-action-primary text-white font-medium",
+        primary: "bg-action-primary text-white",
         secondary:
           "bg-authorisation-viewing-bg text-blue-400 font-semibold border border-authorisation-viewing-border",
         tertiary: "bg-top-surface text-text-primary",
         quaternary: "bg-none text-blue-400",
+        fileAction:
+          "bg-authorisation-locked-border text-text-secondary text-[14px]",
       },
       size: {
         sm: "px-[12px] py-[6px] gap-2 text-[12px]",

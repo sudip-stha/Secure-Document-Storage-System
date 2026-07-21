@@ -9,9 +9,12 @@ import Button from "../../../ui/Button/Button";
 import RequestAccessModal from "../../modals/requestAccessModal/RequestAccessModal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import type { DocumentTableListType } from "../../../../types/data";
 
 const DocumentTableList = () => {
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
+  const [selectedDocument, setSelectedDocument] =
+    useState<DocumentTableListType | null>(null);
   const setOpenRowId = useFilterAction((state) => state.setOpenRowId);
   const openRowId = useFilterAction((state) => state.openRowId);
   const isRowHover = useButtonAction((state) => state.isRowHover);
@@ -22,17 +25,14 @@ const DocumentTableList = () => {
     setOpenRowId(openRowId === id ? null : id);
   }
 
-  const requestDocumentDetails = documentTableList.tableData.filter(
-    (item) => item.id === isRowHover,
-  );
-
   function handleCloseModal() {
     setOpenRowId(null);
     setIsRequestModalOpen(false);
     setIsModalOpen(false);
   }
 
-  function handleRequestAccess() {
+  function handleRequestAccess(document: DocumentTableListType) {
+    setSelectedDocument(document);
     setIsRequestModalOpen(true);
     setIsModalOpen(true);
   }
@@ -44,13 +44,13 @@ const DocumentTableList = () => {
         <div className="fixed inset-0 z-20" onClick={handleCloseModal} />
       )}
       {/*open request modal */}
-      {isRequestModalOpen && (
+      {isRequestModalOpen && selectedDocument && (
         <div
           className="fixed inset-0 flex justify-center items-center z-40"
           onClick={handleCloseModal}
         >
           <RequestAccessModal
-            requestDocumentDetails={requestDocumentDetails[0]}
+            requestDocumentDetails={selectedDocument}
             onClose={() => setIsRequestModalOpen(false)}
           />
         </div>
@@ -76,7 +76,7 @@ const DocumentTableList = () => {
           <div className="w-29.75">
             {isRowHover === value.id && (
               <span>
-                <Button size={"sm"} onClick={handleRequestAccess}>
+                <Button size={"sm"} onClick={() => handleRequestAccess(value)}>
                   Request Access
                 </Button>
               </span>
