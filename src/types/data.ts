@@ -108,4 +108,5 @@ export interface RequestCardType {
 export interface FilePreviewHeaderProps {
   fileName?: string;
   fileOwner?: string;
+  startTimer: boolean;
 }

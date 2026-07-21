@@ -54,6 +54,7 @@ body {
   --color-authorisation-approved-border: #0d3d26;
   --color-authorisation-approved-text: #25c98e;
 
+  --color-authorisation-expired-text: #e8263d;
   --color-authorisation-expired-bg: #1a100d;
   --color-authorisation-expired-border: #3a1a14;
 

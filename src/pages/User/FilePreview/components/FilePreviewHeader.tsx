@@ -4,7 +4,11 @@ import { appRoutes } from "../../../../routes/routes";
 import Button from "../../../../components/ui/Button/Button";
 import CountDownTimer from "./CountDownTimer";
 
-const FilePreviewHeader = ({ fileName, fileOwner }: FilePreviewHeaderProps) => {
+const FilePreviewHeader = ({
+  fileName,
+  fileOwner,
+  startTimer,
+}: FilePreviewHeaderProps) => {
   return (
     <header className="flex justify-between items-center bg-overlay-surface px-8.5 py-4">
       <div className="flex gap-7 ">
@@ -21,7 +25,7 @@ const FilePreviewHeader = ({ fileName, fileOwner }: FilePreviewHeaderProps) => {
       </div>
 
       <div className="flex gap-7">
-        <CountDownTimer />
+        <CountDownTimer startTimer={startTimer} />
         <div className="flex gap-2.5 items-center">
           <Button
             className={"py-3"}
