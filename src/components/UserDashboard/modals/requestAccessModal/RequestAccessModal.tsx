@@ -29,8 +29,8 @@ const RequestAccessModal = ({
       </div>
 
       <div className="flex flex-col gap-1 bg-overlay-surface rounded-lg border border-subtle-border px-4 py-5 ">
-        <span>{requestDocumentDetails.name}</span>
-        <span>{requestDocumentDetails.owner}</span>
+        <span>{requestDocumentDetails?.name}</span>
+        <span>{requestDocumentDetails?.owner}</span>
       </div>
 
       <Heading3 value="Justification (optional)" />

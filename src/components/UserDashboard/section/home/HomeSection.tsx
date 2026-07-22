@@ -55,7 +55,7 @@ const HomeSection = () => {
         </div>
       )}
 
-      <div className="flex gap-2.25 py-6.5">
+      <div className="flex gap-2.25 py-6.5 items-center">
         <img src={"/icons/documentHomeIcon.svg"} alt="" />
         <img src={"/icons/greaterIcon.svg"} alt="" />
         <h2 className="text-text-primary">Documents</h2>

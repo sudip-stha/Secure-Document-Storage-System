@@ -1,11 +1,11 @@
-import type { HeadingType } from '../../types/data';
+import type { HeadingType } from "../../types/data";
 
 const Heading2 = ({ value }: HeadingType) => {
   return (
-    <h1 className="font-poppins font-bold text-[20px] text-text-primary">
+    <h2 className="font-poppins font-bold text-[20px] text-text-primary">
       {value}
-    </h1>
+    </h2>
   );
-}
+};
 
-export default Heading2
+export default Heading2;

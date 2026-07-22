@@ -33,6 +33,7 @@ const ButtonContainer = () => {
           size={"sm"}
           iconPath="/icons/upDownIcon.svg"
           onClick={handleNameSortingFilter}
+          iconPlace="back"
         >
           Name
         </Button>

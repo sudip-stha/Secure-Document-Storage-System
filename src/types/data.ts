@@ -109,4 +109,10 @@ export interface FilePreviewHeaderProps {
   fileName?: string;
   fileOwner?: string;
   startTimer: boolean;
+  onExpire: () => void;
+}
+
+export interface CountDownTimerProps {
+  startTimer: boolean;
+  onExpire: () => void;
 }

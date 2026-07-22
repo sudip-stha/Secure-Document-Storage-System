@@ -1,17 +1,26 @@
 import { useEffect, useState } from "react";
+import type { CountDownTimerProps } from "../../../../types/data";
 
-const CountDownTimer = ({ startTimer }: { startTimer: boolean }) => {
+const CountDownTimer = ({ startTimer, onExpire }: CountDownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState(5 * 60);
 
   useEffect(() => {
-    if (!startTimer || timeLeft === 0) return;
+    if (!startTimer || timeLeft === 0) {
+      return;
+    }
 
     const interval = setInterval(() => {
-      setTimeLeft((prev) => prev - 1);
+      setTimeLeft((prev) => {
+        const newTime = prev - 1;
+        if (newTime === 0) {
+          onExpire();
+        }
+        return newTime;
+      });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [startTimer, timeLeft]);
+  }, [startTimer, timeLeft, onExpire]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;

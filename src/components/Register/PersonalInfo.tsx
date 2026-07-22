@@ -79,7 +79,11 @@ const PersonalInfo = ({ next }: NextBtnType) => {
             <img src="/icons/leftArrow.svg" alt="" className="w-3" />
             Back to Login
           </Link>
-          <Button size={"md"} iconPath={"/icons/rightArrow.svg"}>
+          <Button
+            size={"md"}
+            iconPath={"/icons/rightArrow.svg"}
+            iconPlace="back"
+          >
             Continue
           </Button>
         </div>

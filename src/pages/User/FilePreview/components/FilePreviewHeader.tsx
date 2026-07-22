@@ -8,6 +8,7 @@ const FilePreviewHeader = ({
   fileName,
   fileOwner,
   startTimer,
+  onExpire,
 }: FilePreviewHeaderProps) => {
   return (
     <header className="flex justify-between items-center bg-overlay-surface px-8.5 py-4">
@@ -25,7 +26,7 @@ const FilePreviewHeader = ({
       </div>
 
       <div className="flex gap-7">
-        <CountDownTimer startTimer={startTimer} />
+        <CountDownTimer startTimer={startTimer} onExpire={onExpire} />
         <div className="flex gap-2.5 items-center">
           <Button
             className={"py-3"}

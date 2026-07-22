@@ -22,13 +22,23 @@ const Button = ({
       </button>
     );
   }
+  if (iconPlace == "back") {
+    return (
+      <button
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      >
+        {children}
+        <img src={iconPath} alt="" className={`${iconPath ? "w-3.5" : " "}`} />
+      </button>
+    );
+  }
   return (
     <button
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
       {children}
-      <img src={iconPath} alt="" className={`${iconPath ? "w-3.5" : " "}`} />
     </button>
   );
 };
