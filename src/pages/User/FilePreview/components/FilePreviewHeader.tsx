@@ -10,6 +10,7 @@ const FilePreviewHeader = ({
   startTimer,
   onExpire,
   onPrintingRevoked,
+  onDownloadingRevoked,
 }: FilePreviewHeaderProps) => {
   return (
     <header className="flex justify-between items-center bg-overlay-surface px-8.5 py-4">
@@ -35,6 +36,7 @@ const FilePreviewHeader = ({
             size={"sm"}
             iconPath={"/icons/downloadIcon.svg"}
             iconPlace="front"
+            onClick={() => onDownloadingRevoked()}
           >
             Download
           </Button>

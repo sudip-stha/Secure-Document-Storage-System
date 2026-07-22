@@ -6,7 +6,6 @@ import type { AccessRevokedProps } from "../../../../../types/data";
 
 const AccessRevoked = ({
   revokedMessage,
-  messageWidth,
 }: AccessRevokedProps) => {
   const navigate = useNavigate();
   return (
@@ -14,9 +13,7 @@ const AccessRevoked = ({
       <img src="/icons/accessRevoked.png" alt="Access revoked" />
       <div className="flex flex-col gap-2 items-center">
         <Heading2 value="Access Revoked" />
-        <p
-          className={`font-dmsans text-[12px] text-text-secondary ${messageWidth} text-center `}
-        >
+        <p className="font-dmsans text-[12px] text-text-secondary max-w-75 text-center ">
           {revokedMessage}
         </p>
       </div>

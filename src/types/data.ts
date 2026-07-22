@@ -111,6 +111,7 @@ export interface FilePreviewHeaderProps {
   startTimer: boolean;
   onExpire: () => void;
   onPrintingRevoked: () => void;
+  onDownloadingRevoked: () => void;
 }
 
 export interface CountDownTimerProps {
@@ -120,5 +121,4 @@ export interface CountDownTimerProps {
 
 export interface AccessRevokedProps {
   revokedMessage: string;
-  messageWidth: string;
 }
