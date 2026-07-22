@@ -110,9 +110,15 @@ export interface FilePreviewHeaderProps {
   fileOwner?: string;
   startTimer: boolean;
   onExpire: () => void;
+  onPrintingRevoked: () => void;
 }
 
 export interface CountDownTimerProps {
   startTimer: boolean;
   onExpire: () => void;
+}
+
+export interface AccessRevokedProps {
+  revokedMessage: string;
+  messageWidth: string;
 }

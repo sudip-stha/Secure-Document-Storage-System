@@ -9,6 +9,7 @@ const FilePreviewHeader = ({
   fileOwner,
   startTimer,
   onExpire,
+  onPrintingRevoked,
 }: FilePreviewHeaderProps) => {
   return (
     <header className="flex justify-between items-center bg-overlay-surface px-8.5 py-4">
@@ -43,6 +44,7 @@ const FilePreviewHeader = ({
             size={"lg"}
             iconPath={"/icons/printIcon.svg"}
             iconPlace="front"
+            onClick={() => onPrintingRevoked()}
           >
             Print
           </Button>
