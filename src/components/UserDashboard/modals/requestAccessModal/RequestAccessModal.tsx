@@ -28,14 +28,18 @@ const RequestAccessModal = ({
         </button>
       </div>
 
-      <div className="flex flex-col gap-1 bg-overlay-surface rounded-lg border border-subtle-border px-4 py-5 ">
-        <span>{requestDocumentDetails?.name}</span>
-        <span>{requestDocumentDetails?.owner}</span>
+      <div className="flex flex-col gap-1 font-dmsans text-[14px] bg-overlay-surface rounded-lg border border-subtle-border px-4 py-5 ">
+        <span className=" font-semibold text-white">
+          {requestDocumentDetails?.name}
+        </span>
+        <span className="text-text-secondary">
+          Owner: {requestDocumentDetails?.owner}
+        </span>
       </div>
 
       <Heading3 value="Justification (optional)" />
       <textarea
-        className="bg-elevated-surface min-w-110 border border-strong-border rounded-lg p-2 text-text-tertiary"
+        className="bg-elevated-surface min-w-110 min-h-28.5 border border-strong-border rounded-lg p-2 text-text-tertiary"
         placeholder="Explain why you need to access this document"
       />
 
