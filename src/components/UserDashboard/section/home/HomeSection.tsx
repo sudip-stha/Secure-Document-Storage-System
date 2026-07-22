@@ -3,6 +3,7 @@ import CreateFolderModal from "../../modals/CreateFolderModal";
 import DocumentUploadModal from "../../modals/DocumentUploadModal";
 import FilterModal from "../../modals/filterModal";
 import NameSortingModal from "../../modals/NameSortingModal";
+import NotificationModal from "../../modals/NotificationModal";
 import DocumentTableGrid from "../DocumentTable/DocumentTableGrid";
 import DocumentTableList from "../DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../DocumentTable/DocummentTableTitle";
@@ -51,6 +52,14 @@ const HomeSection = () => {
         <div className="fixed inset-0 z-20" onClick={handleCloseModal}>
           <div className="fixed top-51.25 left-118 z-30">
             <FilterModal />
+          </div>
+        </div>
+      )}
+
+      {buttonAction === "notification" && (
+        <div className="fixed inset-0 z-30" onClick={handleCloseModal}>
+          <div className="fixed top-0 right-0 z-30">
+            <NotificationModal />
           </div>
         </div>
       )}

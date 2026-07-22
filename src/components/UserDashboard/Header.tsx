@@ -1,4 +1,13 @@
+import { useButtonAction } from "../../hooks/useButtonAction";
+
 const Header = () => {
+  const setButtonAction = useButtonAction((state) => state.setButtonAction);
+  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
+
+  function handleNotificationBtn() {
+    setButtonAction("notification");
+    setIsModalOpen(true);
+  }
   return (
     <header className="flex justify-between bg-overlay-surface px-10 py-3">
       <img src="/icons/Logo.svg" alt="" />
@@ -17,11 +26,13 @@ const Header = () => {
         />
       </div>
       <div className="flex gap-5 items-center">
-        <img
-          src="/icons/notificationIcon.svg"
-          alt="This is a notification icon."
-          className="w-5"
-        />
+        <button onClick={handleNotificationBtn}>
+          <img
+            src="/icons/notificationIcon.svg"
+            alt="This is a notification icon."
+            className="w-5"
+          />
+        </button>
 
         <img
           src="/icons/profilePicture.png"
