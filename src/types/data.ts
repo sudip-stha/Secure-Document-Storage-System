@@ -122,3 +122,14 @@ export interface CountDownTimerProps {
 export interface AccessRevokedProps {
   revokedMessage: string;
 }
+
+export interface NotificationDataTypes {
+  id: number;
+  title: string;
+  message: string;
+  date: string;
+}
+
+export interface NotifyItemProps {
+  notifyItem: NotificationDataTypes;
+}

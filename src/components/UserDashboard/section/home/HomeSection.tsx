@@ -3,7 +3,7 @@ import CreateFolderModal from "../../modals/CreateFolderModal";
 import DocumentUploadModal from "../../modals/DocumentUploadModal";
 import FilterModal from "../../modals/filterModal";
 import NameSortingModal from "../../modals/NameSortingModal";
-import NotificationModal from "../../modals/NotificationModal";
+import NotificationModal from "../../modals/notificationModal/NotificationModal";
 import DocumentTableGrid from "../DocumentTable/DocumentTableGrid";
 import DocumentTableList from "../DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../DocumentTable/DocummentTableTitle";
