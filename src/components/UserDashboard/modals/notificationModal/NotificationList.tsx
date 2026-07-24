@@ -1,4 +1,4 @@
-import { notificationData } from "../../../../data/NotificationData";
+import { notificationData } from "../../../../data/notificationData";
 import NotificationCard from "./NotificationCard";
 
 const NotificationList = () => {

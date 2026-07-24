@@ -70,6 +70,10 @@ body {
   --color-status-success-800: #064a2e;
   --color-status-success-900: #03301d;
 
+  --color-status-warning-500: #e09a08;
+
+  --color-status-info-500: #0dafc0;
+
   --color-warm-gray-50: #f7f7f8;
   --color-warm-gray-100: #ededf0;
   --color-warm-gray-200: #d8d8df;

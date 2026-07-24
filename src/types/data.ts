@@ -133,3 +133,14 @@ export interface NotificationDataTypes {
 export interface NotifyItemProps {
   notifyItem: NotificationDataTypes;
 }
+
+export interface AdminStatDataType {
+  id: number;
+  title: string;
+  value: number;
+  iconPath: string;
+}
+
+export interface AdminDashboardCardProps {
+  statData: AdminStatDataType;
+}

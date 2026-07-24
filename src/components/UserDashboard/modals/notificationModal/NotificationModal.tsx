@@ -1,4 +1,4 @@
-import { notificationData } from "../../../../data/NotificationData";
+import { notificationData } from "../../../../data/notificationData";
 import { useButtonAction } from "../../../../hooks/useButtonAction";
 import Heading2 from "../../../ui/Heading2";
 import NotificationEmpty from "./NotificationEmpty";
