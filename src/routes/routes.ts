@@ -10,4 +10,8 @@ export const appRoutes = {
   UserStarred: "/user/starred",
   UserTrash: "/user/trash",
   UserFilePreview: "/user/file/:fileId",
+
+  AdminAuditLogs:"/admin/audit-logs",
+  AdminUserManagement:"/admin/users",
+  AdminFiles:"/admin/files"
 } as const;

@@ -14,6 +14,10 @@ import Starred from "./components/UserDashboard/section/starred/Starred.tsx";
 import Trash from "./components/UserDashboard/section/trash/Trash.tsx";
 import FilePreview from "./pages/User/FilePreview/FilePreview.tsx";
 import DashboardLayout from "./layouts/DashboardLayout.tsx";
+import AdminLayout from "./layouts/AdminLayout.tsx";
+import AuditAndLogs from "./components/AdminDashboard/section/auditAndLogs/AuditAndLogs.tsx";
+import UserManagement from "./components/AdminDashboard/section/userManagement/UserManagement.tsx";
+import Files from "./components/AdminDashboard/section/files/Files.tsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +62,23 @@ const router = createBrowserRouter([
       {
         path: appRoutes.UserTrash,
         element: <Trash />,
+      },
+    ],
+  },
+  {
+    element: <AdminLayout />,
+    children: [
+      {
+        path: appRoutes.AdminAuditLogs,
+        element: <AuditAndLogs />,
+      },
+      {
+        path: appRoutes.AdminUserManagement,
+        element: <UserManagement />,
+      },
+      {
+        path: appRoutes.AdminFiles,
+        element: <Files />,
       },
     ],
   },
