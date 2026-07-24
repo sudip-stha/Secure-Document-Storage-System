@@ -144,3 +144,13 @@ export interface AdminStatDataType {
 export interface AdminDashboardCardProps {
   statData: AdminStatDataType;
 }
+
+export interface RegistrationNotificationDataType {
+  name: string;
+  email: string;
+  registeredDate: string;
+}
+
+export interface RegistrationNotificationCardProps {
+  data: RegistrationNotificationDataType;
+}

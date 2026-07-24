@@ -13,7 +13,7 @@ const AdminDashboardCard = ({ statData }: AdminDashboardCardProps) => {
   console.log(titleColor);
 
   return (
-    <div className="flex flex-col gap-4 px-5 py-8 bg-elevated-surface border border-default-border rounded-lg">
+    <div className="flex flex-col gap-2 px-5 py-8 bg-elevated-surface border border-default-border rounded-lg">
       <div className="flex gap-49 items-center">
         <img src={statData.iconPath} alt="" className="w-6" />
         <span
