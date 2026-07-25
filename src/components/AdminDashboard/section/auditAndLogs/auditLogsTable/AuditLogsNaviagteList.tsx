@@ -1,7 +1,7 @@
 import { NavLink, useSearchParams } from "react-router-dom";
 import { auditLogsTableData } from "../../../../../data/AuditLogsTableData";
 import { appRoutes } from "../../../../../routes/routes";
-import AllEvent from "./tabsComponent/AllEvent";
+import AllEvent from "./tabsComponent/allEvent/AllEvent";
 import Registrations from "./tabsComponent/Registrations";
 import Logins from "./tabsComponent/Logins";
 import Uploads from "./tabsComponent/Uploads";
@@ -12,7 +12,7 @@ const AuditLogsNaviagteList = () => {
   const visitedTab = searchParam.get("tab") || "all";
 
   return (
-    <div className="mt-3 ml-3">
+    <div className="mt-3 ml-3 flex flex-col gap-8">
       <ul className="flex ">
         {auditLogsTableData.auditLogsNavigationList.map((item) => {
           return (
