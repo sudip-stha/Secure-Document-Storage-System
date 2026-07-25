@@ -154,3 +154,16 @@ export interface RegistrationNotificationDataType {
 export interface RegistrationNotificationCardProps {
   data: RegistrationNotificationDataType;
 }
+
+export interface AuditLogsNavigationListType {
+  label: string;
+  value: string;
+}
+
+export interface AuditLogsTableContentType {
+  id: number;
+  timeStamp: string;
+  eventType: string;
+  user: string;
+  details: string;
+}

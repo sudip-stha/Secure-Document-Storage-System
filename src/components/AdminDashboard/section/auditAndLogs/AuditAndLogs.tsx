@@ -1,3 +1,4 @@
+import AuditLogsTable from "./auditLogsTable/AuditLogsTable";
 import RegistrationQueue from "./registrationQueue/RegistrationQueue";
 import StatContainer from "./StatContainer";
 
@@ -7,6 +8,7 @@ const AuditAndLogs = () => {
       <StatContainer />
       <div className="flex gap-3">
         <RegistrationQueue />
+        <AuditLogsTable />
       </div>
     </div>
   );
