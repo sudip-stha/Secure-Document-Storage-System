@@ -172,3 +172,16 @@ export interface AuditLogsTableContentType {
 export interface TabSwitcherProps {
   currentTab: (tab: string) => void;
 }
+
+export interface UserStatusDataType extends RegistrationNotificationDataType {
+  isActive: boolean;
+}
+
+export interface UserCardProps {
+  data: UserStatusDataType;
+}
+
+export interface UserStatusType {
+  value: string;
+  className: string;
+}
