@@ -1,0 +1,35 @@
+import { useState } from "react";
+import type { TabSwitcherProps } from "../../../../types/data";
+
+const TabSwitcher = ({ currentTab }: TabSwitcherProps) => {
+  const [selectedTab, setSelectedTab] = useState("Pending");
+
+  function handlePendingTab() {
+    currentTab("Pending");
+    setSelectedTab("Pending");
+  }
+
+  function handleUsersTab() {
+    currentTab("Users");
+    setSelectedTab("Users");
+  }
+
+  return (
+    <div className="flex items-center py-1 rounded-lg bg-elevated-surface font-dmsans font-medium text-[16px]">
+      <button
+        className={`text-text-secondary rounded-lg py-2 px-15 ${selectedTab === "Pending" && "bg-warm-gray-600 text-white"}`}
+        onClick={handlePendingTab}
+      >
+        <span> Pending</span>
+      </button>
+      <button
+        className={`text-text-secondary rounded-lg py-2 px-15 ${selectedTab === "Users" && "bg-warm-gray-600 text-white"} `}
+        onClick={handleUsersTab}
+      >
+        Users
+      </button>
+    </div>
+  );
+};
+
+export default TabSwitcher;

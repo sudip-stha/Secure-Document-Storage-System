@@ -167,3 +167,7 @@ export interface AuditLogsTableContentType {
   user: string;
   details: string;
 }
+
+export interface TabSwitcherProps {
+  currentTab: (tab: string) => void;
+}
