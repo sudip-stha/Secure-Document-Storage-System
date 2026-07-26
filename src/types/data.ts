@@ -95,6 +95,7 @@ export interface ThreeDotListItemType extends IconPathType {
 
 export interface HeadingType {
   value: string;
+  className?: string;
 }
 
 export interface RequestCardType {

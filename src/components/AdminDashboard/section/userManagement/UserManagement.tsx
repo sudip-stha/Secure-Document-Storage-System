@@ -14,7 +14,9 @@ const UserManagement = () => {
     <div className="p-10 flex flex-col gap-11">
       <div>
         <Heading2 value="User Management" />
-        <span>Review registration and manage user accounts</span>
+        <span className="font-dmsans text-[16px] text-text-secondary">
+          Review registration and manage user accounts
+        </span>
       </div>
       <div className="flex flex-col gap-6 items-start">
         <TabSwitcher currentTab={currentTab} />

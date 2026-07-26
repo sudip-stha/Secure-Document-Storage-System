@@ -1,8 +1,15 @@
+import { twMerge } from "tailwind-merge";
 import type { HeadingType } from "../../types/data";
+import clsx from "clsx";
 
-const Heading2 = ({ value }: HeadingType) => {
+const Heading2 = ({ value, className }: HeadingType) => {
   return (
-    <h2 className="font-poppins font-bold text-[20px] text-text-primary">
+    //className={twMerge(clsx(defaultClasses, conditionalClasses, className))}
+    <h2
+      className={twMerge(
+        clsx("font-poppins font-bold text-[20px] text-text-primary", className),
+      )}
+    >
       {value}
     </h2>
   );

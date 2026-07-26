@@ -19,13 +19,13 @@ const TabSwitcher = ({ currentTab }: TabSwitcherProps) => {
   return (
     <div className="flex items-center py-1 rounded-lg bg-elevated-surface font-dmsans font-medium text-[16px]">
       <button
-        className={`text-text-secondary rounded-lg py-2 px-15 ${selectedTab === "Pending" && "bg-warm-gray-600 text-white"}`}
+        className={`text-text-secondary rounded-lg py-2 px-17 ${selectedTab === "Pending" && "bg-warm-gray-600 text-white"}`}
         onClick={handlePendingTab}
       >
         <span> Pending({totalPending})</span>
       </button>
       <button
-        className={`text-text-secondary rounded-lg py-2 px-15 ${selectedTab === "Users" && "bg-warm-gray-600 text-white"} `}
+        className={`text-text-secondary rounded-lg py-2 px-20 ${selectedTab === "Users" && "bg-warm-gray-600 text-white"} `}
         onClick={handleUsersTab}
       >
         Users
