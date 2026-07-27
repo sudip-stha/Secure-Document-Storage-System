@@ -32,8 +32,10 @@ const Users = () => {
   function onSuspendConfirm() {
     if (!userPendingSuspension) return;
     setUsers((prev) =>
-      prev.map((u) =>
-        u.email === userPendingSuspension.email ? { ...u, isActive: false } : u,
+      prev.map((user) =>
+        user.email === userPendingSuspension.email
+          ? { ...user, isActive: false }
+          : user,
       ),
     );
     closeSuspendModal();
@@ -54,10 +56,10 @@ const Users = () => {
   function onReactivateConfirm() {
     if (!userPendingReactivation) return;
     setUsers((prev) =>
-      prev.map((u) =>
-        u.email === userPendingReactivation.email
-          ? { ...u, isActive: true }
-          : u,
+      prev.map((user) =>
+        user.email === userPendingReactivation.email
+          ? { ...user, isActive: true }
+          : user,
       ),
     );
     closeReactivateModal();
