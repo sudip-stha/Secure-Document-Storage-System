@@ -4,7 +4,6 @@ import CreateFolderModal from "../../../UserDashboard/modals/CreateFolderModal";
 import DocumentUploadModal from "../../../UserDashboard/modals/DocumentUploadModal";
 import FilterModal from "../../../UserDashboard/modals/filterModal";
 import NameSortingModal from "../../../UserDashboard/modals/NameSortingModal";
-import NotificationModal from "../../../UserDashboard/modals/notificationModal/NotificationModal";
 import DocumentTableGrid from "../../../UserDashboard/section/DocumentTable/DocumentTableGrid";
 import DocumentTableList from "../../../UserDashboard/section/DocumentTable/DocumentTableList";
 import DocummentTableTitle from "../../../UserDashboard/section/DocumentTable/DocummentTableTitle";
@@ -53,14 +52,6 @@ const Files = () => {
         <div className="fixed inset-0 z-20" onClick={handleCloseModal}>
           <div className="fixed top-51.25 left-118 z-30">
             <FilterModal />
-          </div>
-        </div>
-      )}
-
-      {buttonAction === "notification" && (
-        <div className="fixed inset-0 z-30" onClick={handleCloseModal}>
-          <div className="fixed top-0 right-0 z-30">
-            <NotificationModal />
           </div>
         </div>
       )}

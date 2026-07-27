@@ -1,15 +1,28 @@
 import { useButtonAction } from "../../hooks/useButtonAction";
+import NotificationModal from "./modals/notificationModal/NotificationModal";
 
 const Header = () => {
   const setButtonAction = useButtonAction((state) => state.setButtonAction);
   const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
-
+  const buttonAction = useButtonAction((state) => state.buttonAction);
   function handleNotificationBtn() {
     setButtonAction("notification");
     setIsModalOpen(true);
   }
+  function handleCloseModal() {
+    setIsModalOpen(false);
+    setButtonAction("");
+  }
+
   return (
     <header className="flex justify-between bg-overlay-surface px-10 py-3">
+      {buttonAction === "notification" && (
+        <div className="fixed inset-0 z-30" onClick={handleCloseModal}>
+          <div className="fixed top-0 right-0 z-30">
+            <NotificationModal />
+          </div>
+        </div>
+      )}
       <img src="/icons/Logo.svg" alt="" />
       <div className="flex">
         <img
