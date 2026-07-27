@@ -72,7 +72,10 @@ const Users = () => {
           className="fixed inset-0 flex items-center justify-center z-40"
           onClick={closeSuspendModal}
         >
-          <SuspendModal onSuspendConfirm={onSuspendConfirm} />
+          <SuspendModal
+            onSuspendConfirm={onSuspendConfirm}
+            onCancel={closeSuspendModal}
+          />
         </div>
       )}
 
@@ -81,7 +84,10 @@ const Users = () => {
           className="fixed inset-0 flex items-center justify-center z-40"
           onClick={closeReactivateModal}
         >
-          <ReactivateModal onReactivateConfirm={onReactivateConfirm} />
+          <ReactivateModal
+            onReactivateConfirm={onReactivateConfirm}
+            onCancel={closeReactivateModal}
+          />
         </div>
       )}
 

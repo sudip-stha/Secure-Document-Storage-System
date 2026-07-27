@@ -1,4 +1,3 @@
-import { useButtonAction } from "../../../../../../hooks/useButtonAction";
 import type { UserCardProps } from "../../../../../../types/data";
 import Button from "../../../../../ui/Button/Button";
 import Heading2 from "../../../../../ui/Heading2";
@@ -10,19 +9,6 @@ const UserCard = ({
   onReactivateClick,
 }: UserCardProps) => {
   const ProfileLetter = data.name[0]; //.split("")[0]
-  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
-  const setButtonAction = useButtonAction((state) => state.setButtonAction);
-  function handleSuspended() {
-    setIsModalOpen(true);
-    setButtonAction("suspend");
-    onSuspendClick();
-  }
-
-  function handleReactivate() {
-    setIsModalOpen(true);
-    setButtonAction("reactivate");
-    onReactivateClick();
-  }
 
   return (
     <div className="flex justify-between min-w-259 items-center font-dmsans p-5 border border-authorisation-locked-border rounded-lg">
@@ -64,7 +50,7 @@ const UserCard = ({
             iconPath="/public/icons/suspendIcon.svg"
             iconPlace="front"
             className="px-5 py-2 flex gap-1"
-            onClick={handleSuspended}
+            onClick={onSuspendClick}
           >
             Suspend
           </Button>
@@ -74,7 +60,7 @@ const UserCard = ({
             iconPath="/icons/tickIcon.svg"
             iconPlace="front"
             className="px-5 py-2 flex gap-1"
-            onClick={handleReactivate}
+            onClick={onReactivateClick}
           >
             Reactivate
           </Button>

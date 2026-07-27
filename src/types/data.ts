@@ -190,4 +190,10 @@ export interface UserStatusType {
 
 export interface SuspendModalType {
   onSuspendConfirm: () => void;
+  onCancel: () => void;
+}
+
+export interface ReactivateModalType {
+  onReactivateConfirm: () => void;
+  onCancel: () => void;
 }

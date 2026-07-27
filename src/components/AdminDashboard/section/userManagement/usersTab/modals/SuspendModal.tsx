@@ -1,17 +1,8 @@
-import { useButtonAction } from "../../../../../../hooks/useButtonAction";
 import type { SuspendModalType } from "../../../../../../types/data";
 import Button from "../../../../../ui/Button/Button";
 import Heading2 from "../../../../../ui/Heading2";
 
-const SuspendModal = ({ onSuspendConfirm }: SuspendModalType) => {
-  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
-  const setButtonAction = useButtonAction((state) => state.setButtonAction);
-
-  function handleSuspendModal() {
-    setIsModalOpen(false);
-    setButtonAction("");
-  }
-
+const SuspendModal = ({ onSuspendConfirm, onCancel }: SuspendModalType) => {
   return (
     <div
       className="flex flex-col gap-10 items-end bg-warm-gray-700 rounded-2xl p-7 border border-subtle-border "
@@ -28,7 +19,7 @@ const SuspendModal = ({ onSuspendConfirm }: SuspendModalType) => {
           variant={"fileAction"}
           size={"xl"}
           className="px-6"
-          onClick={handleSuspendModal}
+          onClick={onCancel}
         >
           Cancel
         </Button>

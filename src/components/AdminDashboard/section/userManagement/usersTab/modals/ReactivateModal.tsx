@@ -1,19 +1,11 @@
-import { useButtonAction } from "../../../../../../hooks/useButtonAction";
+import type { ReactivateModalType } from "../../../../../../types/data";
 import Button from "../../../../../ui/Button/Button";
 import Heading2 from "../../../../../ui/Heading2";
 
 const ReactivateModal = ({
   onReactivateConfirm,
-}: {
-  onReactivateConfirm: () => void;
-}) => {
-  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
-  const setButtonAction = useButtonAction((state) => state.setButtonAction);
-
-  function handleReactivateModal() {
-    setIsModalOpen(false);
-    setButtonAction("");
-  }
+  onCancel,
+}: ReactivateModalType) => {
   return (
     <div
       className="flex flex-col gap-10 items-end bg-warm-gray-700 rounded-2xl p-7 border border-subtle-border "
@@ -31,7 +23,7 @@ const ReactivateModal = ({
           variant={"fileAction"}
           size={"xl"}
           className="px-6"
-          onClick={handleReactivateModal}
+          onClick={onCancel}
         >
           Cancel
         </Button>
