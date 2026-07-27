@@ -5,7 +5,7 @@ export const userStatusData: UserStatusDataType[] = [
     name: "Emily Watson",
     email: "emily.watson@company.com",
     registeredDate: "Feb 25, 2026, 07:45 PM",
-    isActive: false,
+    isActive: true,
   },
   {
     name: "Emily Watson",

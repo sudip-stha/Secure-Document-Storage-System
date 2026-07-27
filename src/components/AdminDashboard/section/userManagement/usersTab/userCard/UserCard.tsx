@@ -1,10 +1,29 @@
+import { useButtonAction } from "../../../../../../hooks/useButtonAction";
 import type { UserCardProps } from "../../../../../../types/data";
 import Button from "../../../../../ui/Button/Button";
 import Heading2 from "../../../../../ui/Heading2";
 import UserStatus from "../../../../../ui/UserStatus";
 
-const UserCard = ({ data }: UserCardProps) => {
+const UserCard = ({
+  data,
+  onSuspendClick,
+  onReactivateClick,
+}: UserCardProps) => {
   const ProfileLetter = data.name[0]; //.split("")[0]
+  const setIsModalOpen = useButtonAction((state) => state.setIsModalOpen);
+  const setButtonAction = useButtonAction((state) => state.setButtonAction);
+  function handleSuspended() {
+    setIsModalOpen(true);
+    setButtonAction("suspend");
+    onSuspendClick();
+  }
+
+  function handleReactivate() {
+    setIsModalOpen(true);
+    setButtonAction("reactivate");
+    onReactivateClick();
+  }
+
   return (
     <div className="flex justify-between min-w-259 items-center font-dmsans p-5 border border-authorisation-locked-border rounded-lg">
       <div className="flex gap-5">
@@ -39,14 +58,27 @@ const UserCard = ({ data }: UserCardProps) => {
             className="bg-[#3D250D] border-[#A85D12] text-[#D78028]"
           />
         )}
-        <Button
-          variant={"tertiary"}
-          iconPath="/public/icons/suspendIcon.svg"
-          iconPlace="front"
-          className="px-5 py-2 flex gap-1"
-        >
-          Suspend
-        </Button>
+        {data.isActive ? (
+          <Button
+            variant={"tertiary"}
+            iconPath="/public/icons/suspendIcon.svg"
+            iconPlace="front"
+            className="px-5 py-2 flex gap-1"
+            onClick={handleSuspended}
+          >
+            Suspend
+          </Button>
+        ) : (
+          <Button
+            variant={"reactivate"}
+            iconPath="/icons/tickIcon.svg"
+            iconPlace="front"
+            className="px-5 py-2 flex gap-1"
+            onClick={handleReactivate}
+          >
+            Reactivate
+          </Button>
+        )}
       </div>
     </div>
   );

@@ -5,12 +5,13 @@ export const useButtonAction = create<UseButtonActionType>((set) => ({
   buttonAction: "",
   isModalOpen: false,
   isListBtnActive: "list",
-  isRequestBtnActive:"incomming",
+  isRequestBtnActive: "incomming",
   isRowHover: null,
   setButtonAction: (action: string) => set(() => ({ buttonAction: action })),
   setIsModalOpen: (action: boolean) => set(() => ({ isModalOpen: action })),
   setIsListBtnActive: (activeValue: string) =>
     set(() => ({ isListBtnActive: activeValue })),
-  setIsRequestBtnActive:(actionValue:string)=>set(()=>({isRequestBtnActive:actionValue})),
+  setIsRequestBtnActive: (actionValue: string) =>
+    set(() => ({ isRequestBtnActive: actionValue })),
   setIsRowHover: (id: number | null) => set(() => ({ isRowHover: id })),
 }));

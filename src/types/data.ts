@@ -179,9 +179,15 @@ export interface UserStatusDataType extends RegistrationNotificationDataType {
 
 export interface UserCardProps {
   data: UserStatusDataType;
+  onSuspendClick: () => void;
+  onReactivateClick: () => void;
 }
 
 export interface UserStatusType {
   value: string;
   className: string;
+}
+
+export interface SuspendModalType {
+  onSuspendConfirm: () => void;
 }
