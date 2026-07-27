@@ -2,7 +2,11 @@ import type { RegistrationNotificationCardProps } from "../../../../../types/dat
 import Button from "../../../../ui/Button/Button";
 import Heading2 from "../../../../ui/Heading2";
 
-const PendingCard = ({ data }: RegistrationNotificationCardProps) => {
+const PendingCard = ({
+  data,
+  onApproveUser,
+  onRejectUser,
+}: RegistrationNotificationCardProps) => {
   const ProfileLetter = data.name[0]; //.split("")[0]
   return (
     <div className="flex gap-64 items-center font-dmsans p-5 border border-authorisation-pending-border rounded-lg">
@@ -32,6 +36,7 @@ const PendingCard = ({ data }: RegistrationNotificationCardProps) => {
           iconPath="/icons/tickIcon.svg"
           iconPlace="front"
           className="px-4 py-2 flex gap-1 items-center"
+          onClick={onApproveUser}
         >
           Approve
         </Button>
@@ -40,6 +45,7 @@ const PendingCard = ({ data }: RegistrationNotificationCardProps) => {
           iconPath="/icons/rejectIcon.svg"
           iconPlace="front"
           className="px-5 py-2 flex gap-1 items-center"
+          onClick={onRejectUser}
         >
           Reject
         </Button>

@@ -3,6 +3,8 @@ import Button from "../../../../ui/Button/Button";
 
 const RegistrationNotificationCard = ({
   data,
+  onApproveUser,
+  onRejectUser,
 }: RegistrationNotificationCardProps) => {
   return (
     <div className="flex flex-col gap-3">
@@ -27,10 +29,18 @@ const RegistrationNotificationCard = ({
         </div>
       </div>
       <div className="flex gap-2">
-        <Button variant={"sucess"} className="px-9 py-2 rounded-sm">
+        <Button
+          variant={"sucess"}
+          className="px-9 py-2 rounded-sm"
+          onClick={onApproveUser}
+        >
           Approve
         </Button>
-        <Button variant={"danger"} className="px-[42.5px] py-2 rounded-sm">
+        <Button
+          variant={"danger"}
+          className="px-[42.5px] py-2 rounded-sm"
+          onClick={onRejectUser}
+        >
           Reject
         </Button>
       </div>

@@ -154,6 +154,8 @@ export interface RegistrationNotificationDataType {
 
 export interface RegistrationNotificationCardProps {
   data: RegistrationNotificationDataType;
+  onApproveUser: () => void;
+  onRejectUser: () => void;
 }
 
 export interface AuditLogsNavigationListType {
